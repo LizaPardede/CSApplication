@@ -1,0 +1,1857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDataReg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataRegResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataRegResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataDoctor">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataDoctorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataDoctorResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataPoly">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataPolyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataPolyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GedDataDoctorbyPoly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Poly" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GedDataDoctorbyPolyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GedDataDoctorbyPolyResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataInv">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataInvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataInvResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataPatient">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataPatientResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataPatientResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataHistory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="idpatient" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataHistoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataHistoryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDataReceiptHeader">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Reg_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Patient_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Patient_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Doctor_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Doctor_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDataReceiptHeaderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertDataReceiptHeaderResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertReceiptApotekDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Sales_Aptk_Detail_ID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Sales_Aptk_Detail_Item_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Sales_Aptk_Detail_Qty" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertReceiptApotekDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertReceiptApotekDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertReceiptUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User_Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertReceiptUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertReceiptUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiptUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="User_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User_Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="User_Password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateReceiptUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateReceiptUserResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDataReceipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="regid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteDataReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteDataReceiptResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataDepartmen">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDataDepartmenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataDepartmenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPertanyaanByDepartmen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepartmentID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPertanyaanByDepartmenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPertanyaanByDepartmenResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailPertanyaanByPertanyaan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PertanyaanID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDetailPertanyaanByPertanyaanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDetailPertanyaanByPertanyaanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerSatisfactionRawatJalan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Poly_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Doctor_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kategori_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pertanyaan_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail_Pertanyaan_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerSatisfactionRawatJalanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCustomerSatisfactionRawatJalanResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerSatisfactionFarmasi">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Kategori_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pertanyaan_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail_Pertanyaan_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerSatisfactionFarmasiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCustomerSatisfactionFarmasiResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerSatisfactionRawatInap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Kategori_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pertanyaan_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Detail_Pertanyaan_ID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCustomerSatisfactionRawatInapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCustomerSatisfactionRawatInapResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDataRegSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataReg" />
+  </wsdl:message>
+  <wsdl:message name="GetDataRegSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataRegResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDoctorSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataDoctor" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDoctorSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPolySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataPoly" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPolySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataPolyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GedDataDoctorbyPolySoapIn">
+    <wsdl:part name="parameters" element="tns:GedDataDoctorbyPoly" />
+  </wsdl:message>
+  <wsdl:message name="GedDataDoctorbyPolySoapOut">
+    <wsdl:part name="parameters" element="tns:GedDataDoctorbyPolyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataInvSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataInv" />
+  </wsdl:message>
+  <wsdl:message name="GetDataInvSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataInvResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPatientSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataPatient" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPatientSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataUserSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataUser" />
+  </wsdl:message>
+  <wsdl:message name="GetDataUserSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHistorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataHistory" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHistorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutUserSoapIn">
+    <wsdl:part name="parameters" element="tns:AutUser" />
+  </wsdl:message>
+  <wsdl:message name="AutUserSoapOut">
+    <wsdl:part name="parameters" element="tns:AutUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataReceiptHeaderSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDataReceiptHeader" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataReceiptHeaderSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDataReceiptHeaderResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptApotekDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertReceiptApotekDetail" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptApotekDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertReceiptApotekDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptUserSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertReceiptUser" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptUserSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertReceiptUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptUserSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateReceiptUser" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptUserSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateReceiptUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteDataReceipt" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteDataReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDepartmenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDataDepartmen" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDepartmenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataDepartmenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPertanyaanByDepartmenSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPertanyaanByDepartmen" />
+  </wsdl:message>
+  <wsdl:message name="GetPertanyaanByDepartmenSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPertanyaanByDepartmenResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPertanyaanByPertanyaanSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDetailPertanyaanByPertanyaan" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPertanyaanByPertanyaanSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDetailPertanyaanByPertanyaanResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatJalanSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionRawatJalan" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatJalanSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionRawatJalanResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionFarmasiSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionFarmasi" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionFarmasiSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionFarmasiResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatInapSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionRawatInap" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatInapSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionRawatInapResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataRegHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataRegHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDoctorHttpGetIn" />
+  <wsdl:message name="GetDataDoctorHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPolyHttpGetIn" />
+  <wsdl:message name="GetDataPolyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GedDataDoctorbyPolyHttpGetIn">
+    <wsdl:part name="Poly" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GedDataDoctorbyPolyHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataInvHttpGetIn" />
+  <wsdl:message name="GetDataInvHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPatientHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPatientHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataUserHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHistoryHttpGetIn">
+    <wsdl:part name="idpatient" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHistoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AutUserHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataReceiptHeaderHttpGetIn">
+    <wsdl:part name="Sales_Aptk_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Type" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Reg_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Patient_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Patient_Name" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Doctor_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Doctor_Name" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataReceiptHeaderHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptApotekDetailHttpGetIn">
+    <wsdl:part name="Sales_Aptk_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Detail_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Detail_Item_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Detail_Qty" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptApotekDetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptUserHttpGetIn">
+    <wsdl:part name="User_ID" type="s:string" />
+    <wsdl:part name="User_Name" type="s:string" />
+    <wsdl:part name="User_Password" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptUserHttpGetIn">
+    <wsdl:part name="User_ID" type="s:string" />
+    <wsdl:part name="User_Name" type="s:string" />
+    <wsdl:part name="User_Password" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptUserHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReceiptHttpGetIn">
+    <wsdl:part name="regid" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReceiptHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDepartmenHttpGetIn" />
+  <wsdl:message name="GetDataDepartmenHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPertanyaanByDepartmenHttpGetIn">
+    <wsdl:part name="DepartmentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPertanyaanByDepartmenHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPertanyaanByPertanyaanHttpGetIn">
+    <wsdl:part name="PertanyaanID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPertanyaanByPertanyaanHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatJalanHttpGetIn">
+    <wsdl:part name="Poly_ID" type="s:string" />
+    <wsdl:part name="Doctor_ID" type="s:string" />
+    <wsdl:part name="Kategori_ID" type="s:string" />
+    <wsdl:part name="Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="StartTime" type="s:string" />
+    <wsdl:part name="EndTime" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatJalanHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionFarmasiHttpGetIn">
+    <wsdl:part name="Kategori_ID" type="s:string" />
+    <wsdl:part name="Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="StartTime" type="s:string" />
+    <wsdl:part name="EndTime" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionFarmasiHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpGetIn">
+    <wsdl:part name="Kategori_ID" type="s:string" />
+    <wsdl:part name="Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="StartTime" type="s:string" />
+    <wsdl:part name="EndTime" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataRegHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataRegHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDoctorHttpPostIn" />
+  <wsdl:message name="GetDataDoctorHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPolyHttpPostIn" />
+  <wsdl:message name="GetDataPolyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GedDataDoctorbyPolyHttpPostIn">
+    <wsdl:part name="Poly" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GedDataDoctorbyPolyHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataInvHttpPostIn" />
+  <wsdl:message name="GetDataInvHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPatientHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataPatientHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataUserHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHistoryHttpPostIn">
+    <wsdl:part name="idpatient" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDataHistoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="AutUserHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AutUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataReceiptHeaderHttpPostIn">
+    <wsdl:part name="Sales_Aptk_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Type" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Reg_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Patient_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Patient_Name" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Doctor_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Doctor_Name" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertDataReceiptHeaderHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptApotekDetailHttpPostIn">
+    <wsdl:part name="Sales_Aptk_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Detail_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Detail_Item_ID" type="s:string" />
+    <wsdl:part name="Sales_Aptk_Detail_Qty" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptApotekDetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptUserHttpPostIn">
+    <wsdl:part name="User_ID" type="s:string" />
+    <wsdl:part name="User_Name" type="s:string" />
+    <wsdl:part name="User_Password" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertReceiptUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptUserHttpPostIn">
+    <wsdl:part name="User_ID" type="s:string" />
+    <wsdl:part name="User_Name" type="s:string" />
+    <wsdl:part name="User_Password" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateReceiptUserHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReceiptHttpPostIn">
+    <wsdl:part name="regid" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteDataReceiptHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetDataDepartmenHttpPostIn" />
+  <wsdl:message name="GetDataDepartmenHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetPertanyaanByDepartmenHttpPostIn">
+    <wsdl:part name="DepartmentID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPertanyaanByDepartmenHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPertanyaanByPertanyaanHttpPostIn">
+    <wsdl:part name="PertanyaanID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDetailPertanyaanByPertanyaanHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatJalanHttpPostIn">
+    <wsdl:part name="Poly_ID" type="s:string" />
+    <wsdl:part name="Doctor_ID" type="s:string" />
+    <wsdl:part name="Kategori_ID" type="s:string" />
+    <wsdl:part name="Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="StartTime" type="s:string" />
+    <wsdl:part name="EndTime" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatJalanHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionFarmasiHttpPostIn">
+    <wsdl:part name="Kategori_ID" type="s:string" />
+    <wsdl:part name="Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="StartTime" type="s:string" />
+    <wsdl:part name="EndTime" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionFarmasiHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpPostIn">
+    <wsdl:part name="Kategori_ID" type="s:string" />
+    <wsdl:part name="Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
+    <wsdl:part name="StartTime" type="s:string" />
+    <wsdl:part name="EndTime" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="GetDataReg">
+      <wsdl:input message="tns:GetDataRegSoapIn" />
+      <wsdl:output message="tns:GetDataRegSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <wsdl:input message="tns:GetDataDoctorSoapIn" />
+      <wsdl:output message="tns:GetDataDoctorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <wsdl:input message="tns:GetDataPolySoapIn" />
+      <wsdl:output message="tns:GetDataPolySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <wsdl:input message="tns:GedDataDoctorbyPolySoapIn" />
+      <wsdl:output message="tns:GedDataDoctorbyPolySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <wsdl:input message="tns:GetDataInvSoapIn" />
+      <wsdl:output message="tns:GetDataInvSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <wsdl:input message="tns:GetDataPatientSoapIn" />
+      <wsdl:output message="tns:GetDataPatientSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <wsdl:input message="tns:GetDataUserSoapIn" />
+      <wsdl:output message="tns:GetDataUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <wsdl:input message="tns:GetDataHistorySoapIn" />
+      <wsdl:output message="tns:GetDataHistorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <wsdl:input message="tns:AutUserSoapIn" />
+      <wsdl:output message="tns:AutUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <wsdl:input message="tns:InsertDataReceiptHeaderSoapIn" />
+      <wsdl:output message="tns:InsertDataReceiptHeaderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <wsdl:input message="tns:InsertReceiptApotekDetailSoapIn" />
+      <wsdl:output message="tns:InsertReceiptApotekDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <wsdl:input message="tns:InsertReceiptUserSoapIn" />
+      <wsdl:output message="tns:InsertReceiptUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <wsdl:input message="tns:UpdateReceiptUserSoapIn" />
+      <wsdl:output message="tns:UpdateReceiptUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <wsdl:input message="tns:DeleteDataReceiptSoapIn" />
+      <wsdl:output message="tns:DeleteDataReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <wsdl:input message="tns:GetDataDepartmenSoapIn" />
+      <wsdl:output message="tns:GetDataDepartmenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <wsdl:input message="tns:GetPertanyaanByDepartmenSoapIn" />
+      <wsdl:output message="tns:GetPertanyaanByDepartmenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <wsdl:input message="tns:GetDetailPertanyaanByPertanyaanSoapIn" />
+      <wsdl:output message="tns:GetDetailPertanyaanByPertanyaanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <wsdl:input message="tns:InsertCustomerSatisfactionRawatJalanSoapIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionRawatJalanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <wsdl:input message="tns:InsertCustomerSatisfactionFarmasiSoapIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionFarmasiSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <wsdl:input message="tns:InsertCustomerSatisfactionRawatInapSoapIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionRawatInapSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpGet">
+    <wsdl:operation name="GetDataReg">
+      <wsdl:input message="tns:GetDataRegHttpGetIn" />
+      <wsdl:output message="tns:GetDataRegHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <wsdl:input message="tns:GetDataDoctorHttpGetIn" />
+      <wsdl:output message="tns:GetDataDoctorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <wsdl:input message="tns:GetDataPolyHttpGetIn" />
+      <wsdl:output message="tns:GetDataPolyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <wsdl:input message="tns:GedDataDoctorbyPolyHttpGetIn" />
+      <wsdl:output message="tns:GedDataDoctorbyPolyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <wsdl:input message="tns:GetDataInvHttpGetIn" />
+      <wsdl:output message="tns:GetDataInvHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <wsdl:input message="tns:GetDataPatientHttpGetIn" />
+      <wsdl:output message="tns:GetDataPatientHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <wsdl:input message="tns:GetDataUserHttpGetIn" />
+      <wsdl:output message="tns:GetDataUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <wsdl:input message="tns:GetDataHistoryHttpGetIn" />
+      <wsdl:output message="tns:GetDataHistoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <wsdl:input message="tns:AutUserHttpGetIn" />
+      <wsdl:output message="tns:AutUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <wsdl:input message="tns:InsertDataReceiptHeaderHttpGetIn" />
+      <wsdl:output message="tns:InsertDataReceiptHeaderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <wsdl:input message="tns:InsertReceiptApotekDetailHttpGetIn" />
+      <wsdl:output message="tns:InsertReceiptApotekDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <wsdl:input message="tns:InsertReceiptUserHttpGetIn" />
+      <wsdl:output message="tns:InsertReceiptUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <wsdl:input message="tns:UpdateReceiptUserHttpGetIn" />
+      <wsdl:output message="tns:UpdateReceiptUserHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <wsdl:input message="tns:DeleteDataReceiptHttpGetIn" />
+      <wsdl:output message="tns:DeleteDataReceiptHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <wsdl:input message="tns:GetDataDepartmenHttpGetIn" />
+      <wsdl:output message="tns:GetDataDepartmenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <wsdl:input message="tns:GetPertanyaanByDepartmenHttpGetIn" />
+      <wsdl:output message="tns:GetPertanyaanByDepartmenHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <wsdl:input message="tns:GetDetailPertanyaanByPertanyaanHttpGetIn" />
+      <wsdl:output message="tns:GetDetailPertanyaanByPertanyaanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <wsdl:input message="tns:InsertCustomerSatisfactionRawatJalanHttpGetIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionRawatJalanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <wsdl:input message="tns:InsertCustomerSatisfactionFarmasiHttpGetIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionFarmasiHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <wsdl:input message="tns:InsertCustomerSatisfactionRawatInapHttpGetIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionRawatInapHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService1HttpPost">
+    <wsdl:operation name="GetDataReg">
+      <wsdl:input message="tns:GetDataRegHttpPostIn" />
+      <wsdl:output message="tns:GetDataRegHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <wsdl:input message="tns:GetDataDoctorHttpPostIn" />
+      <wsdl:output message="tns:GetDataDoctorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <wsdl:input message="tns:GetDataPolyHttpPostIn" />
+      <wsdl:output message="tns:GetDataPolyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <wsdl:input message="tns:GedDataDoctorbyPolyHttpPostIn" />
+      <wsdl:output message="tns:GedDataDoctorbyPolyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <wsdl:input message="tns:GetDataInvHttpPostIn" />
+      <wsdl:output message="tns:GetDataInvHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <wsdl:input message="tns:GetDataPatientHttpPostIn" />
+      <wsdl:output message="tns:GetDataPatientHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <wsdl:input message="tns:GetDataUserHttpPostIn" />
+      <wsdl:output message="tns:GetDataUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <wsdl:input message="tns:GetDataHistoryHttpPostIn" />
+      <wsdl:output message="tns:GetDataHistoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <wsdl:input message="tns:AutUserHttpPostIn" />
+      <wsdl:output message="tns:AutUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <wsdl:input message="tns:InsertDataReceiptHeaderHttpPostIn" />
+      <wsdl:output message="tns:InsertDataReceiptHeaderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <wsdl:input message="tns:InsertReceiptApotekDetailHttpPostIn" />
+      <wsdl:output message="tns:InsertReceiptApotekDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <wsdl:input message="tns:InsertReceiptUserHttpPostIn" />
+      <wsdl:output message="tns:InsertReceiptUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <wsdl:input message="tns:UpdateReceiptUserHttpPostIn" />
+      <wsdl:output message="tns:UpdateReceiptUserHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <wsdl:input message="tns:DeleteDataReceiptHttpPostIn" />
+      <wsdl:output message="tns:DeleteDataReceiptHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <wsdl:input message="tns:GetDataDepartmenHttpPostIn" />
+      <wsdl:output message="tns:GetDataDepartmenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <wsdl:input message="tns:GetPertanyaanByDepartmenHttpPostIn" />
+      <wsdl:output message="tns:GetPertanyaanByDepartmenHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <wsdl:input message="tns:GetDetailPertanyaanByPertanyaanHttpPostIn" />
+      <wsdl:output message="tns:GetDetailPertanyaanByPertanyaanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <wsdl:input message="tns:InsertCustomerSatisfactionRawatJalanHttpPostIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionRawatJalanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <wsdl:input message="tns:InsertCustomerSatisfactionFarmasiHttpPostIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionFarmasiHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <wsdl:input message="tns:InsertCustomerSatisfactionRawatInapHttpPostIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionRawatInapHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataReg">
+      <soap:operation soapAction="http://tempuri.org/GetDataReg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <soap:operation soapAction="http://tempuri.org/GetDataDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <soap:operation soapAction="http://tempuri.org/GetDataPoly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <soap:operation soapAction="http://tempuri.org/GedDataDoctorbyPoly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <soap:operation soapAction="http://tempuri.org/GetDataInv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <soap:operation soapAction="http://tempuri.org/GetDataPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <soap:operation soapAction="http://tempuri.org/GetDataUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <soap:operation soapAction="http://tempuri.org/GetDataHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <soap:operation soapAction="http://tempuri.org/AutUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <soap:operation soapAction="http://tempuri.org/InsertDataReceiptHeader" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <soap:operation soapAction="http://tempuri.org/InsertReceiptApotekDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <soap:operation soapAction="http://tempuri.org/InsertReceiptUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <soap:operation soapAction="http://tempuri.org/UpdateReceiptUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <soap:operation soapAction="http://tempuri.org/DeleteDataReceipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <soap:operation soapAction="http://tempuri.org/GetDataDepartmen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <soap:operation soapAction="http://tempuri.org/GetPertanyaanByDepartmen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <soap:operation soapAction="http://tempuri.org/GetDetailPertanyaanByPertanyaan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <soap:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionRawatJalan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <soap:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionFarmasi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <soap:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionRawatInap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataReg">
+      <soap12:operation soapAction="http://tempuri.org/GetDataReg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <soap12:operation soapAction="http://tempuri.org/GetDataDoctor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <soap12:operation soapAction="http://tempuri.org/GetDataPoly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <soap12:operation soapAction="http://tempuri.org/GedDataDoctorbyPoly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <soap12:operation soapAction="http://tempuri.org/GetDataInv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <soap12:operation soapAction="http://tempuri.org/GetDataPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <soap12:operation soapAction="http://tempuri.org/GetDataUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <soap12:operation soapAction="http://tempuri.org/GetDataHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <soap12:operation soapAction="http://tempuri.org/AutUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <soap12:operation soapAction="http://tempuri.org/InsertDataReceiptHeader" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <soap12:operation soapAction="http://tempuri.org/InsertReceiptApotekDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <soap12:operation soapAction="http://tempuri.org/InsertReceiptUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <soap12:operation soapAction="http://tempuri.org/UpdateReceiptUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <soap12:operation soapAction="http://tempuri.org/DeleteDataReceipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <soap12:operation soapAction="http://tempuri.org/GetDataDepartmen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <soap12:operation soapAction="http://tempuri.org/GetPertanyaanByDepartmen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <soap12:operation soapAction="http://tempuri.org/GetDetailPertanyaanByPertanyaan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <soap12:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionRawatJalan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <soap12:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionFarmasi" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <soap12:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionRawatInap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpGet" type="tns:WebService1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetDataReg">
+      <http:operation location="/GetDataReg" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <http:operation location="/GetDataDoctor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <http:operation location="/GetDataPoly" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <http:operation location="/GedDataDoctorbyPoly" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <http:operation location="/GetDataInv" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <http:operation location="/GetDataPatient" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <http:operation location="/GetDataUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <http:operation location="/GetDataHistory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <http:operation location="/AutUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <http:operation location="/InsertDataReceiptHeader" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <http:operation location="/InsertReceiptApotekDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <http:operation location="/InsertReceiptUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <http:operation location="/UpdateReceiptUser" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <http:operation location="/DeleteDataReceipt" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <http:operation location="/GetDataDepartmen" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <http:operation location="/GetPertanyaanByDepartmen" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <http:operation location="/GetDetailPertanyaanByPertanyaan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <http:operation location="/InsertCustomerSatisfactionRawatJalan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <http:operation location="/InsertCustomerSatisfactionFarmasi" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <http:operation location="/InsertCustomerSatisfactionRawatInap" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1HttpPost" type="tns:WebService1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetDataReg">
+      <http:operation location="/GetDataReg" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDoctor">
+      <http:operation location="/GetDataDoctor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPoly">
+      <http:operation location="/GetDataPoly" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GedDataDoctorbyPoly">
+      <http:operation location="/GedDataDoctorbyPoly" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInv">
+      <http:operation location="/GetDataInv" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataPatient">
+      <http:operation location="/GetDataPatient" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUser">
+      <http:operation location="/GetDataUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataHistory">
+      <http:operation location="/GetDataHistory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutUser">
+      <http:operation location="/AutUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDataReceiptHeader">
+      <http:operation location="/InsertDataReceiptHeader" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptApotekDetail">
+      <http:operation location="/InsertReceiptApotekDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertReceiptUser">
+      <http:operation location="/InsertReceiptUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceiptUser">
+      <http:operation location="/UpdateReceiptUser" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDataReceipt">
+      <http:operation location="/DeleteDataReceipt" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataDepartmen">
+      <http:operation location="/GetDataDepartmen" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPertanyaanByDepartmen">
+      <http:operation location="/GetPertanyaanByDepartmen" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailPertanyaanByPertanyaan">
+      <http:operation location="/GetDetailPertanyaanByPertanyaan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatJalan">
+      <http:operation location="/InsertCustomerSatisfactionRawatJalan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionFarmasi">
+      <http:operation location="/InsertCustomerSatisfactionFarmasi" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
+      <http:operation location="/InsertCustomerSatisfactionRawatInap" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="http://10.160.1.123/CSService/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="http://10.160.1.123/CSService/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpGet" binding="tns:WebService1HttpGet">
+      <http:address location="http://10.160.1.123/CSService/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1HttpPost" binding="tns:WebService1HttpPost">
+      <http:address location="http://10.160.1.123/CSService/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
