@@ -14,9 +14,9 @@ namespace CSApplication.Model
 {
     class ModelDepartemen
     {
-        public string DepartemenId;
         public string DepartemenName;
-
+        public string DepartemenId;
+        
         public string getDepartemenId()
         {
             return DepartemenId;

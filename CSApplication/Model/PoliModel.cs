@@ -16,6 +16,18 @@ namespace CSApplication.Model
     {
         private string PoliId;
         private string PoliName;
+        public string DepartemenId;
+
+        public string getDepartemenId()
+        {
+            return DepartemenId;
+        }
+
+        public void setDepartemenId(string departemenId)
+        {
+            this.DepartemenId = departemenId;
+        }
+
 
         public string getPoliId() {
             return PoliId;

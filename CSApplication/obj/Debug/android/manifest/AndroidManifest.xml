@@ -14,6 +14,7 @@
     <activity android:label="DetailPertanyaanActivity" android:name="md5e7b2058380b18dbfd63ea0ecbfc3b9c2.DetailPertanyaanActivity" />
     <activity android:label="DokterActivity" android:name="md5e7b2058380b18dbfd63ea0ecbfc3b9c2.DokterActivity" />
     <activity android:label="PertanyaanActivity" android:name="md5e7b2058380b18dbfd63ea0ecbfc3b9c2.PertanyaanActivity" />
+    <activity android:label="PertanyaanRJ" android:name="md5e7b2058380b18dbfd63ea0ecbfc3b9c2.PertanyaanRJ" />
     <activity android:label="PoliActivity" android:name="md5e7b2058380b18dbfd63ea0ecbfc3b9c2.PoliActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="CSApplication.CSApplication.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

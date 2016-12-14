@@ -15,7 +15,7 @@ using System.Data;
 namespace CSApplication.Activities
 {
     [Activity(Label = "DetailPertanyaanActivity")]
-    public class DetailPertanyaanActivity : Activity
+    class DetailPertanyaanActivity : Activity
     {
         private List<DetailPertanyaanModel> mDetailList;
         private ListView mListView;
@@ -41,7 +41,8 @@ namespace CSApplication.Activities
             List<DetailPertanyaanModel> tempDetail = new List<DetailPertanyaanModel>();
             DetailPertanyaanModel mDetail = null;
 
-            foreach (DataRow dr in ds.Tables[0].Rows) {
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
                 mDetail = new DetailPertanyaanModel();
                 mDetail.setIdDetailPertanyaan(dr["Id_Detail_Pertanyaan"].ToString());
                 mDetail.setIdPertanyaan(dr["Id_Pertanyaan"].ToString());

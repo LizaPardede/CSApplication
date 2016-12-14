@@ -58,6 +58,7 @@
     <Compile Include="Activities\DokterActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\PertanyaanActivity.cs" />
+    <Compile Include="Activities\PertanyaanRJ.cs" />
     <Compile Include="Activities\PoliActivity.cs" />
     <Compile Include="Adapter\AdapterDepartemen.cs" />
     <Compile Include="Adapter\AdapterDetailPertanyaan.cs" />
@@ -106,6 +107,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\layout_detail_pertanyaan_adapter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout_pertanyaan_rj.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <None Include="Web References\CSService\Reference.map">

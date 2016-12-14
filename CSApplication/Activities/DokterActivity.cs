@@ -20,16 +20,20 @@ namespace CSApplication.Activities
     {
         private List<DokterModel> mDokterList;
         private ListView mListView;
+        
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.layout_dokter);
             string id = Intent.GetStringExtra("idPoli") ?? "Data not available";
+            string idDep = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
+
 
             mListView = FindViewById<ListView>(Resource.Id.listDokter);
             mDokterList = new List<DokterModel>();
             CSService.WebService1 mService = new CSService.WebService1();
+            mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
 
             DataSet ds = mService.GedDataDoctorbyPoly(id);
             mDokterList = getDokterName(ds);
@@ -41,8 +45,8 @@ namespace CSApplication.Activities
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var mDokter = mDokterList[e.Position];
-            var intent = new Intent(this, typeof(PertanyaanActivity));
-            intent.PutExtra("idDepartemen", mDokter.getDepartemenId ());
+            var intent = new Intent(this, typeof(PertanyaanRJ));
+            intent.PutExtra("idDepartemen", "Dep2");
             StartActivity(intent);
         }
 
@@ -53,7 +57,7 @@ namespace CSApplication.Activities
 
             foreach (DataRow dr in ds.Tables[0].Rows) {
                 mDokter = new DokterModel();
-                mDokter.setDokterId(dr["ID"].ToString());
+                mDokter.setDolterId(dr["ID"].ToString());
                 mDokter.setDokterName(dr["Nama"].ToString());
                 tempDokter.Add(mDokter);
             }

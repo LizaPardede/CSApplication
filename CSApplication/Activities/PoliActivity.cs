@@ -22,8 +22,7 @@ namespace CSApplication.Activities
         private ListView mListView; 
 
         protected override void OnCreate(Bundle savedInstanceState)
-        {
-           
+        {  
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.layout_poli);
             string id = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
@@ -46,6 +45,7 @@ namespace CSApplication.Activities
             var mPoli = mPoliList[e.Position];
             var intent = new Intent(this, typeof(DokterActivity));
             intent.PutExtra("idPoli", mPoli.getPoliId());
+            intent.PutExtra("idDepartemen", mPoli.getDepartemenId());
             StartActivity(intent);  
         }
 

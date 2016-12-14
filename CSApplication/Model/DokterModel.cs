@@ -16,16 +16,17 @@ namespace CSApplication.Model
     {
         private string DokterId;
         private string DokterName;
-        private string DepartemenId;
+        public string DepartemenId;
 
-        public string getDokterId() {
+        public string getDokterId()
+        {
             return DokterId;
         }
 
-        public void setDokterId(string dokterId) {
+        public void setDolterId(string dokterId)
+        {
             this.DokterId = dokterId;
         }
-
         public string getDokterName() {
             return DokterName;
         }
@@ -34,12 +35,15 @@ namespace CSApplication.Model
             this.DokterName = dokterName;
         }
 
-        public string getDepartemenId() {
+        public string getDepartemenId()
+        {
             return DepartemenId;
         }
 
-        public void setDepartemenId(string depId) {
-            this.DepartemenId = depId;
+        public void setDepartemenId(string departemenId)
+        {
+            this.DepartemenId = departemenId;
         }
+
     }
 }

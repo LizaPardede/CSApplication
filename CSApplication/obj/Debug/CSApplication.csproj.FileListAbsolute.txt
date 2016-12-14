@@ -60,6 +60,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication\bin\Debug\CSApplication.dll
 C:\Users\parde\Documents\CSApplication\CSApplication\bin\Debug\CSApplication.pdb
 C:\Users\parde\Documents\CSApplication\CSApplication\bin\Debug\CSApplication.CSApplication.apk
 C:\Users\parde\Documents\CSApplication\CSApplication\bin\Debug\CSApplication.CSApplication-Signed.apk
+C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\CSApplication.csprojResolveAssemblyReference.cache
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\CSApplication.dll
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\CSApplication.pdb
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\bin\CSApplication.CSApplication.apk
@@ -72,6 +73,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\layout\layout
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\layout\layout_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\layout\layout_detail_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\layout\layout_detail_pertanyaan_adapter.xml
+C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\layout\layout_pertanyaan_rj.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\layout\main.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\values\strings.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\drawable\icon.png

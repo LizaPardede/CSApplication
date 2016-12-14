@@ -14,16 +14,17 @@ public final class R {
         public static final int icon=0x7f020000;
     }
     public static final class id {
-        public static final int listDepartemen=0x7f050009;
+        public static final int listDepartemen=0x7f05000a;
         public static final int listDetailPertanyaan=0x7f050001;
         public static final int listDokter=0x7f050003;
         public static final int listPertanyaan=0x7f050005;
-        public static final int listPoli=0x7f050007;
+        public static final int listPertanyaanRj=0x7f050007;
+        public static final int listPoli=0x7f050008;
         public static final int nameDepartment=0x7f050000;
         public static final int textDetailPertanyaan=0x7f050002;
         public static final int textDokter=0x7f050004;
         public static final int textPertanyaan=0x7f050006;
-        public static final int textPoli=0x7f050008;
+        public static final int textPoli=0x7f050009;
     }
     public static final class layout {
         public static final int layout_departemen_adapter=0x7f030000;
@@ -33,9 +34,10 @@ public final class R {
         public static final int layout_dokter_adapter=0x7f030004;
         public static final int layout_pertanyaan=0x7f030005;
         public static final int layout_pertanyaan_adapter=0x7f030006;
-        public static final int layout_poli=0x7f030007;
-        public static final int layout_poli_adapter=0x7f030008;
-        public static final int main=0x7f030009;
+        public static final int layout_pertanyaan_rj=0x7f030007;
+        public static final int layout_poli=0x7f030008;
+        public static final int layout_poli_adapter=0x7f030009;
+        public static final int main=0x7f03000a;
     }
     public static final class string {
         public static final int ApplicationName=0x7f040001;

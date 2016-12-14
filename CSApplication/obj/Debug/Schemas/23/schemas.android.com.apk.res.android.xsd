@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>13/12/2016 13:54:29</xs:documentation>
+    <xs:documentation>14/12/2016 14:41:56</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16720,12 +16720,14 @@
             <xs:enumeration value="@id/listDetailPertanyaan" />
             <xs:enumeration value="@id/listDokter" />
             <xs:enumeration value="@id/listPertanyaan" />
+            <xs:enumeration value="@id/listPertanyaanRj" />
             <xs:enumeration value="@id/listPoli" />
             <xs:enumeration value="@id/nameDepartment" />
             <xs:enumeration value="@id/textDetailPertanyaan" />
             <xs:enumeration value="@id/textDokter" />
             <xs:enumeration value="@id/textPertanyaan" />
             <xs:enumeration value="@id/textPoli" />
+            <xs:enumeration value="@id/textRawatJalan" />
             <xs:enumeration value="@android:id/accessibilityActionContextClick" />
             <xs:enumeration value="@android:id/accessibilityActionScrollDown" />
             <xs:enumeration value="@android:id/accessibilityActionScrollLeft" />

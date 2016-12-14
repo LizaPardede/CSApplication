@@ -27,14 +27,25 @@ namespace CSApplication.Activities
             SetContentView(Resource.Layout.layout_pertanyaan);
             string id = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
 
-            mListView = FindViewById<ListView>(Resource.Id.listPertanyaan);
-            mPertanyaanList = new List<PertanyaanModel>();
+            DataSet ds;
             CSService.WebService1 mService = new CSService.WebService1();
+            mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
 
-            DataSet ds = mService.GetPertanyaanByDepartmen(id);
-            mPertanyaanList = getPertanyaan(ds);
-            mListView.Adapter = new AdapterPertanyaan(this, mPertanyaanList);
-            mListView.ItemClick += MListView_ItemClick;
+            if (id == "Dep1" || id == "Dep3")
+            {
+                ds = mService.GetPertanyaanByDepartmen(id);
+                mListView = FindViewById<ListView>(Resource.Id.listPertanyaan);
+                mPertanyaanList = new List<PertanyaanModel>();
+                mPertanyaanList = getPertanyaan(ds);
+                mListView.Adapter = new AdapterPertanyaan(this, mPertanyaanList);
+                mListView.ItemClick += MListView_ItemClick;
+            }
+            else if (id == "Dep2")
+            {
+                ds = mService.GetDataPoly();
+                var intent = new Intent(this, typeof(PoliActivity));
+                StartActivity(intent);
+            }
         }
 
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
