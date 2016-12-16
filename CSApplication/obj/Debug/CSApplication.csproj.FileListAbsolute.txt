@@ -115,5 +115,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\assets\Sy
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\assets\System.Web.Services.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
+C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\values\styles.xml
+C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\drawable\button.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\CSApplication.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication\bin\Debug\CSApplication.dll.mdb

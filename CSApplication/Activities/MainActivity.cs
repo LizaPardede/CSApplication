@@ -9,7 +9,7 @@ using CSApplication.Model;
 
 namespace CSApplication
 {
-    [Activity(Label = "CSApplication", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Customer Satisfaction", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
        
@@ -32,8 +32,6 @@ namespace CSApplication
 
             mListView.Adapter = new Adapter.AdapterDepartemen(this, mDepartemenList);
             mListView.ItemClick += MListView_ItemClick;
-            
-
         }
 
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
