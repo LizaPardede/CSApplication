@@ -23,7 +23,7 @@ namespace CSApplication.Model
         }
 
         public void setIdDetailPertanyaan(string idDetailPertanyaan) {
-            this.DetailPertanyaan = idDetailPertanyaan;
+            this.IdDetailPertanyaan = idDetailPertanyaan;
         }
 
         public string getIdPertanyaan() {

@@ -51,7 +51,7 @@ namespace CSApplication.Adapter
             if (row == null) {
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.layout_detail_pertanyaan_adapter, parent, false);
             }
-
+             
             TextView txtDetail = row.FindViewById<TextView>(Resource.Id.textDetailPertanyaan);
             txtDetail.Text = mItems[position].getDetailPertanyaan();
 

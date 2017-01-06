@@ -3,7 +3,7 @@
   <xs:import schemaLocation="schemas.android.com.apk.res.android.xsd" namespace="http://schemas.android.com/apk/res/android" />
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>16/12/2016 15:17:32</xs:documentation>
+    <xs:documentation>21/12/2016 15:41:09</xs:documentation>
   </xs:annotation>
   <xs:group name="any-view">
     <xs:choice>
@@ -80,6 +80,7 @@
       <xs:element ref="HorizontalScrollView" />
       <xs:element ref="SearchView" />
       <xs:element ref="fragment" />
+      <xs:element ref="android.support.v7.widget.CardView" />
     </xs:choice>
   </xs:group>
   <xs:element name="CheckBox" type="CheckBox">
@@ -1372,5 +1373,15 @@
     <xs:attribute ref="android:layout_marginStart" />
     <xs:attribute ref="android:layout_marginEnd" />
     <xs:attribute ref="android:style" />
+  </xs:complexType>
+  <xs:element name="android.support.v7.widget.CardView" type="android.support.v7.widget.CardView">
+    <xs:annotation>
+      <xs:documentation>Runtime Type: Android.Support.V7.Widget.CardView</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="android.support.v7.widget.CardView">
+    <xs:complexContent mixed="false">
+      <xs:extension base="FrameLayout" />
+    </xs:complexContent>
   </xs:complexType>
 </xs:schema>

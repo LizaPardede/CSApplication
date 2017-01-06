@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -12,20 +11,19 @@ using Android.Widget;
 using CSApplication.Model;
 using System.Data;
 using CSApplication.Adapter;
+using CSApplication.Fragments;
 
 namespace CSApplication.Activities
 {
     [Activity(Label = "PertanyaanActivity")]
     public class PertanyaanActivity : Activity
     {
-        private List<PertanyaanModel> mPertanyaanList;
-        private ListView mListView;
-
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.layout_pertanyaan);
             string id = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
+            
 
             DataSet ds;
             CSService.WebService1 mService = new CSService.WebService1();
@@ -33,12 +31,11 @@ namespace CSApplication.Activities
 
             if (id == "Dep1" || id == "Dep3")
             {
-                ds = mService.GetPertanyaanByDepartmen(id);
-                mListView = FindViewById<ListView>(Resource.Id.listPertanyaan);
-                mPertanyaanList = new List<PertanyaanModel>();
-                mPertanyaanList = getPertanyaan(ds);
-                mListView.Adapter = new AdapterPertanyaan(this, mPertanyaanList);
-                mListView.ItemClick += MListView_ItemClick;
+                var pertanyaanFragmen = new PertanyaanFragment();
+                
+                FragmentTransaction fragmentTx = this.FragmentManager.BeginTransaction();
+                fragmentTx.Add(Resource.Id.listPertanyaan, pertanyaanFragmen);
+                fragmentTx.Commit();
             }
             else if (id == "Dep2")
             {
@@ -48,13 +45,28 @@ namespace CSApplication.Activities
             }
         }
 
-        private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
+        private List<DetailPertanyaanModel> getDetailPertanyaan(DataSet ds1)
+        {
+            List<DetailPertanyaanModel> tempDetail = new List<DetailPertanyaanModel>();
+            DetailPertanyaanModel mDetail = null;
+
+            foreach (DataRow dr in ds1.Tables[0].Rows)
+            {
+                mDetail = new DetailPertanyaanModel();
+                mDetail.setIdDetailPertanyaan(dr["Id_Detail_Pertanyaan"].ToString());
+                mDetail.setDetailPertanyaan(dr["detail_pertanyaan"].ToString());
+                tempDetail.Add(mDetail);
+            }
+            return tempDetail;
+        }
+
+        /*private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             var mPertanyaan = mPertanyaanList[e.Position];
             var intent = new Intent(this, typeof(DetailPertanyaanActivity));
             intent.PutExtra("idPertanyaan", mPertanyaan.getPertanyaanId());
             StartActivity(intent);
-        }
+        }*/
 
         private List<PertanyaanModel> getPertanyaan(DataSet ds)
         {

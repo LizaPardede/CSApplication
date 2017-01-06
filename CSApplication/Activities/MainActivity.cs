@@ -6,6 +6,7 @@ using System.Data;
 using System;
 using Android.Content;
 using CSApplication.Model;
+using CSApplication.Adapter;
 
 namespace CSApplication
 {
@@ -30,7 +31,7 @@ namespace CSApplication
             DataSet ds = mService.GetDataDepartmen();
             mDepartemenList = getDepartemen(ds);
 
-            mListView.Adapter = new Adapter.AdapterDepartemen(this, mDepartemenList);
+            mListView.Adapter = new AdapterDepartemen(this, mDepartemenList);
             mListView.ItemClick += MListView_ItemClick;
         }
 

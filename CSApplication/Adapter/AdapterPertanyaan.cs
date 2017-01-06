@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using CSApplication.Fragments;
 using CSApplication.Model;
 
 namespace CSApplication.Adapter
@@ -17,10 +18,18 @@ namespace CSApplication.Adapter
     {
         private List<PertanyaanModel> mItems;
         private Activity mContext;
+        private PertanyaanFragment pertanyaanFragment;
+        private List<PertanyaanModel> mPertanyaanList;
 
         public AdapterPertanyaan(Activity context, List<PertanyaanModel> items) {
             mItems = items;
             mContext = context;
+        }
+
+        public AdapterPertanyaan(PertanyaanFragment pertanyaanFragment, List<PertanyaanModel> mPertanyaanList)
+        {
+            this.pertanyaanFragment = pertanyaanFragment;
+            this.mPertanyaanList = mPertanyaanList;
         }
 
         public override PertanyaanModel this[int position]
