@@ -63,29 +63,23 @@ namespace CSApplication
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060012
-			public const int DataHeader = 2131099666;
+			// aapt resource value: 0x7f060010
+			public const int DataHeader = 2131099664;
 			
 			// aapt resource value: 0x7f060000
 			public const int DataId = 2131099648;
 			
-			// aapt resource value: 0x7f06000c
-			public const int button1 = 2131099660;
-			
 			// aapt resource value: 0x7f06000a
-			public const int expandableListView1 = 2131099658;
-			
-			// aapt resource value: 0x7f060014
-			public const int fragment1 = 2131099668;
+			public const int btn = 2131099658;
 			
 			// aapt resource value: 0x7f060009
-			public const int linearLayout1 = 2131099657;
+			public const int expandableListView1 = 2131099657;
 			
-			// aapt resource value: 0x7f06000b
-			public const int linearLayout2 = 2131099659;
+			// aapt resource value: 0x7f060012
+			public const int fragment1 = 2131099666;
 			
-			// aapt resource value: 0x7f060013
-			public const int listDepartemen = 2131099667;
+			// aapt resource value: 0x7f060011
+			public const int listDepartemen = 2131099665;
 			
 			// aapt resource value: 0x7f060005
 			public const int listDetailPertanyaan = 2131099653;
@@ -93,11 +87,11 @@ namespace CSApplication
 			// aapt resource value: 0x7f060007
 			public const int listDokter = 2131099655;
 			
-			// aapt resource value: 0x7f06000f
-			public const int listPertanyaanRj = 2131099663;
+			// aapt resource value: 0x7f06000d
+			public const int listPertanyaanRj = 2131099661;
 			
-			// aapt resource value: 0x7f060010
-			public const int listPoli = 2131099664;
+			// aapt resource value: 0x7f06000e
+			public const int listPoli = 2131099662;
 			
 			// aapt resource value: 0x7f060004
 			public const int nameDepartment = 2131099652;
@@ -117,14 +111,14 @@ namespace CSApplication
 			// aapt resource value: 0x7f060008
 			public const int textDokter = 2131099656;
 			
-			// aapt resource value: 0x7f06000d
-			public const int textPertanyaan = 2131099661;
+			// aapt resource value: 0x7f06000b
+			public const int textPertanyaan = 2131099659;
 			
-			// aapt resource value: 0x7f060011
-			public const int textPoli = 2131099665;
+			// aapt resource value: 0x7f06000f
+			public const int textPoli = 2131099663;
 			
-			// aapt resource value: 0x7f06000e
-			public const int textView1 = 2131099662;
+			// aapt resource value: 0x7f06000c
+			public const int textView1 = 2131099660;
 			
 			static Id()
 			{

@@ -44,6 +44,7 @@ namespace CSApplication.Activities
                 List<PertanyaanModel> listPertanyaan = Data.listPertanyaan(id);
                 var listView = FindViewById<ExpandableListView>(Resource.Id.expandableListView1);
                 listView.SetAdapter(new ExpandableDataAdapter(this, listPertanyaan));
+                
                
               
 
