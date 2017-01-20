@@ -14,6 +14,6 @@
         android:textStyle="bold"
         android:paddingStart="40dp"
         android:paddingLeft="40dp"
-        android:background="#F7FEFE" 
-        android:lineSpacingExtra="10dp"/>
+        android:background="#F7FEFE"
+        android:lineSpacingExtra="10dp" />
 </LinearLayout>

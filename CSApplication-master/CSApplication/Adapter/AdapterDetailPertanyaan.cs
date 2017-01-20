@@ -22,6 +22,7 @@ namespace CSApplication.Adapter
         public AdapterDetailPertanyaan(Activity context, List<DetailPertanyaanModel> items) {
             mItems = items;
             mContext = context;
+            NotifyDataSetChanged();
         }
 
         public override DetailPertanyaanModel this[int position]
@@ -37,6 +38,8 @@ namespace CSApplication.Adapter
             get
             {
                 return mItems.Count;
+                //Toast.MakeText(mContext, mItems.Count, ToastLength.Long).Show();
+                
             }
         }
 
@@ -54,6 +57,8 @@ namespace CSApplication.Adapter
 
             TextView txtDetail = row.FindViewById<TextView>(Resource.Id.textDetailPertanyaan);
             txtDetail.Text = mItems[position].getDetailPertanyaan();
+
+            Console.WriteLine("tes"+mItems.Count);
 
             return row; 
         }

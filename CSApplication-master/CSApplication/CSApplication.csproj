@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,8 +60,10 @@
     <Compile Include="Activities\DokterActivity.cs" />
     <Compile Include="Activities\MainActivity.cs" />
     <Compile Include="Activities\PertanyaanActivity.cs" />
+    <Compile Include="Activities\PertanyaanPager.cs" />
     <Compile Include="Activities\PertanyaanRJ.cs" />
     <Compile Include="Activities\PoliActivity.cs" />
+    <Compile Include="Activities\Result.cs" />
     <Compile Include="Activities\Tesst.cs" />
     <Compile Include="Adapter\AdapterDepartemen.cs" />
     <Compile Include="Adapter\AdapterDetailPertanyaan.cs" />
@@ -68,6 +71,8 @@
     <Compile Include="Adapter\AdapterPertanyaan.cs" />
     <Compile Include="Adapter\AdapterPoli.cs" />
     <Compile Include="Adapter\ExpandableDataAdapter.cs" />
+    <Compile Include="Adapter\ListPagerAdapter.cs" />
+    <Compile Include="Adapter\Paginator.cs" />
     <Compile Include="Fragments\PertanyaanFragment.cs" />
     <Compile Include="Model\DetailPertanyaanModel.cs" />
     <Compile Include="Model\DokterModel.cs" />
@@ -101,9 +106,6 @@
     <AndroidResource Include="Resources\layout\layout_dokter.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\layout_pertanyaan_adapter.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\layout_pertanyaan.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -128,6 +130,15 @@
     <AndroidResource Include="Resources\layout\DataListItem.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\result.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout_pager.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\layout_pertanyaan_adapter.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <None Include="Web References\CSService\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -146,7 +157,9 @@
     <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WebReferences Include="Web References\" />
@@ -176,6 +189,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\button.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\previous.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>06/01/2017 17:42:54</xs:documentation>
+    <xs:documentation>19/01/2017 20:29:52</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16761,11 +16761,13 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/checkBox1" />
-            <xs:enumeration value="@id/button1" />
+            <xs:enumeration value="@id/btnKirim" />
             <xs:enumeration value="@id/DataHeader" />
             <xs:enumeration value="@id/DataId" />
             <xs:enumeration value="@id/expandableListView1" />
             <xs:enumeration value="@id/fragment1" />
+            <xs:enumeration value="@id/idNext" />
+            <xs:enumeration value="@id/idPrev" />
             <xs:enumeration value="@id/linearLayout1" />
             <xs:enumeration value="@id/linearLayout2" />
             <xs:enumeration value="@id/listDepartemen" />
@@ -16773,14 +16775,14 @@
             <xs:enumeration value="@id/listDokter" />
             <xs:enumeration value="@id/listPertanyaanRj" />
             <xs:enumeration value="@id/listPoli" />
+            <xs:enumeration value="@id/lvDetail" />
+            <xs:enumeration value="@id/lvPertanyaan" />
             <xs:enumeration value="@id/nameDepartment" />
             <xs:enumeration value="@id/radioButton1" />
             <xs:enumeration value="@id/radioButton2" />
             <xs:enumeration value="@id/radioGroup1" />
             <xs:enumeration value="@id/textDetailPertanyaan" />
             <xs:enumeration value="@id/textDokter" />
-            <xs:enumeration value="@id/textHeader" />
-            <xs:enumeration value="@id/textItem" />
             <xs:enumeration value="@id/textPertanyaan" />
             <xs:enumeration value="@id/textPoli" />
             <xs:enumeration value="@id/textView1" />

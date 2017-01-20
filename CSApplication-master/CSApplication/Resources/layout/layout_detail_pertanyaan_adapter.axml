@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
     <TextView
         android:text="Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textDetailPertanyaan" />
+        android:layout_margin="2dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="#fbfcfd"
+        android:padding="5dp"
+        android:textColor="#343434"
+        android:lineSpacingExtra="5dp"
+        android:id="@+id/textDetailPertanyaan"/>
+    <RadioGroup
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_below="@+id/textDetailPertanyaan"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroup1">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingRight="50dp"
+            android:text="Setuju"
+            android:id="@+id/radioButton1" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tidak Setuju"
+            android:id="@+id/radioButton2" />
+    </RadioGroup>
 </LinearLayout>

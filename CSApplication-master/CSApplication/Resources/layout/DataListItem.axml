@@ -14,7 +14,7 @@
         android:paddingStart="40dp"
         android:paddingLeft="40dp"
         android:textColor="#343434"
-        android:lineSpacingExtra="5dp"/>
+        android:lineSpacingExtra="5dp" />
     <RadioGroup
         android:minWidth="25px"
         android:minHeight="25px"
@@ -31,11 +31,13 @@
             android:checked="true"
             android:text="Tidak setuju"
             android:paddingEnd="60dp"
+            android:onClick="radioButton_Click"
             android:id="@+id/radioButton1" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Setuju"
+            android:onClick="radioButton_Click"
             android:id="@+id/radioButton2" />
     </RadioGroup>
 </LinearLayout>

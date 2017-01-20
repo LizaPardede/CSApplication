@@ -12,12 +12,32 @@ using Android.Widget;
 using CSApplication.Model;
 using System.Data;
 using CSApplication.Adapter;
+using Java.Interop;
 
 namespace CSApplication.Activities
 {
     [Activity(Label = "Customer Satisfaction")]
     public class PertanyaanActivity : Activity
     {
+        [Export("radioButton_Click")]
+        
+        public void radioButton_OnClick(View v)
+        {
+            switch (v.Id)
+            {
+                case Resource.Id.radioButton1:
+                    Toast.MakeText(this, "No!", ToastLength.Short).Show();
+                    
+                    break;
+
+                case Resource.Id.radioButton2:
+                    Toast.MakeText(this, "Yes!", ToastLength.Short).Show();
+                    break;
+            }
+        }
+
+     
+
         private List<PertanyaanModel> mPertanyaanList;
         private ListView mListView;
 
@@ -41,20 +61,20 @@ namespace CSApplication.Activities
 
                 //mListView.Adapter = new AdapterPertanyaan(this, mPertanyaanList);
                 //mListView.ItemClick += MListView_ItemClick;
+
                 List<PertanyaanModel> listPertanyaan = Data.listPertanyaan(id);
                 var listView = FindViewById<ExpandableListView>(Resource.Id.expandableListView1);
                 listView.SetAdapter(new ExpandableDataAdapter(this, listPertanyaan));
-                
-               
-              
 
-                //ExpandableListView exList = (ExpandableListView)FindViewById(Resource.Id.expandableListView1);
-                //exList.SetIndicatorBounds(5, 5);
-                //ExAdapter exAdpt = new ExAdapter(mPertanyaanList, this);
-                //exList.SetIndicatorBounds(0, 20);
-                //exList.SetAdapter(exAdpt);
+                Button btnKirim = FindViewById<Button>(Resource.Id.btnKirim);
+                btnKirim.Click += delegate
+                {
+                    var intent = new Intent(this, typeof(Result));
+                    StartActivity(intent);
+                };
 
             }
+
             else if (id == "Dep2")
             {
                 ds = mService.GetDataPoly();
@@ -62,8 +82,6 @@ namespace CSApplication.Activities
                 StartActivity(intent);
             }
         }
-
-      
 
         private void MListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
@@ -87,5 +105,6 @@ namespace CSApplication.Activities
             }
             return tempDokter;
         }
+
     }
 }

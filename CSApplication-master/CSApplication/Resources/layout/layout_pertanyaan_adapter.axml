@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:text="Text"
-        android:layout_width="match_parent"
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+ >
+    <TextView android:id="@+id/textPertanyaan"
+        android:text="Pertanyaan"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textPertanyaan" />
+        android:background="#FEFEFE"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#2B2835"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:paddingBottom="2dp"
+    />
+    <ListView android:id="@+id/lvDetail"
+        android:layout_width="fill_parent"
+        android:layout_height="400dp"
+        android:cacheColorHint="#FFDAFF7F"
+        android:layout_weight="1"
+    />
 </LinearLayout>

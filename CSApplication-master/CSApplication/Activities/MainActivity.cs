@@ -39,7 +39,7 @@ namespace CSApplication
         {
             var mDepartemen = mDepartemenList[e.Position];
             //Toast.MakeText(this, mDepartemen.getDepartemenId(), ToastLength.Long).Show();
-            var intent = new Intent(this, typeof(Activities.PertanyaanActivity));
+            var intent = new Intent(this, typeof(Activities.PertanyaanPager));
             intent.PutExtra("idDepartemen", mDepartemen.getDepartemenId());
             StartActivity(intent);
         }
