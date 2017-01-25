@@ -257,6 +257,30 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="InsertSignatureImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image_Url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertSignatureImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsertSignatureImageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="UpdateReceiptUser">
         <s:complexType>
           <s:sequence>
@@ -409,22 +433,21 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertCustomerSatisfactionRawatInap">
+      <s:element name="InsertCustomerSatisfaction">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="Kategori_ID" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="Pertanyaan_ID" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="Detail_Pertanyaan_ID" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime" />
             <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="InsertCustomerSatisfactionRawatInapResponse">
+      <s:element name="InsertCustomerSatisfactionResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="InsertCustomerSatisfactionRawatInapResult">
+            <s:element minOccurs="0" maxOccurs="1" name="InsertCustomerSatisfactionResult">
               <s:complexType>
                 <s:sequence>
                   <s:element ref="s:schema" />
@@ -518,6 +541,12 @@
   <wsdl:message name="InsertReceiptUserSoapOut">
     <wsdl:part name="parameters" element="tns:InsertReceiptUserResponse" />
   </wsdl:message>
+  <wsdl:message name="InsertSignatureImageSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertSignatureImage" />
+  </wsdl:message>
+  <wsdl:message name="InsertSignatureImageSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertSignatureImageResponse" />
+  </wsdl:message>
   <wsdl:message name="UpdateReceiptUserSoapIn">
     <wsdl:part name="parameters" element="tns:UpdateReceiptUser" />
   </wsdl:message>
@@ -560,11 +589,11 @@
   <wsdl:message name="InsertCustomerSatisfactionFarmasiSoapOut">
     <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionFarmasiResponse" />
   </wsdl:message>
-  <wsdl:message name="InsertCustomerSatisfactionRawatInapSoapIn">
-    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionRawatInap" />
+  <wsdl:message name="InsertCustomerSatisfactionSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfaction" />
   </wsdl:message>
-  <wsdl:message name="InsertCustomerSatisfactionRawatInapSoapOut">
-    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionRawatInapResponse" />
+  <wsdl:message name="InsertCustomerSatisfactionSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCustomerSatisfactionResponse" />
   </wsdl:message>
   <wsdl:message name="GetDataRegHttpGetIn">
     <wsdl:part name="id" type="s:string" />
@@ -647,6 +676,15 @@
   <wsdl:message name="InsertReceiptUserHttpGetOut">
     <wsdl:part name="Body" element="tns:DataSet" />
   </wsdl:message>
+  <wsdl:message name="InsertSignatureImageHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="Image_Url" type="s:string" />
+    <wsdl:part name="Description" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertSignatureImageHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
   <wsdl:message name="UpdateReceiptUserHttpGetIn">
     <wsdl:part name="User_ID" type="s:string" />
     <wsdl:part name="User_Name" type="s:string" />
@@ -703,15 +741,14 @@
   <wsdl:message name="InsertCustomerSatisfactionFarmasiHttpGetOut">
     <wsdl:part name="Body" element="tns:DataSet" />
   </wsdl:message>
-  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpGetIn">
+  <wsdl:message name="InsertCustomerSatisfactionHttpGetIn">
     <wsdl:part name="Kategori_ID" type="s:string" />
     <wsdl:part name="Pertanyaan_ID" type="s:string" />
     <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
     <wsdl:part name="StartTime" type="s:string" />
-    <wsdl:part name="EndTime" type="s:string" />
     <wsdl:part name="user" type="s:string" />
   </wsdl:message>
-  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpGetOut">
+  <wsdl:message name="InsertCustomerSatisfactionHttpGetOut">
     <wsdl:part name="Body" element="tns:DataSet" />
   </wsdl:message>
   <wsdl:message name="GetDataRegHttpPostIn">
@@ -795,6 +832,15 @@
   <wsdl:message name="InsertReceiptUserHttpPostOut">
     <wsdl:part name="Body" element="tns:DataSet" />
   </wsdl:message>
+  <wsdl:message name="InsertSignatureImageHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="Image_Url" type="s:string" />
+    <wsdl:part name="Description" type="s:string" />
+    <wsdl:part name="user" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsertSignatureImageHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
   <wsdl:message name="UpdateReceiptUserHttpPostIn">
     <wsdl:part name="User_ID" type="s:string" />
     <wsdl:part name="User_Name" type="s:string" />
@@ -851,15 +897,14 @@
   <wsdl:message name="InsertCustomerSatisfactionFarmasiHttpPostOut">
     <wsdl:part name="Body" element="tns:DataSet" />
   </wsdl:message>
-  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpPostIn">
+  <wsdl:message name="InsertCustomerSatisfactionHttpPostIn">
     <wsdl:part name="Kategori_ID" type="s:string" />
     <wsdl:part name="Pertanyaan_ID" type="s:string" />
     <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
     <wsdl:part name="StartTime" type="s:string" />
-    <wsdl:part name="EndTime" type="s:string" />
     <wsdl:part name="user" type="s:string" />
   </wsdl:message>
-  <wsdl:message name="InsertCustomerSatisfactionRawatInapHttpPostOut">
+  <wsdl:message name="InsertCustomerSatisfactionHttpPostOut">
     <wsdl:part name="Body" element="tns:DataSet" />
   </wsdl:message>
   <wsdl:portType name="WebService1Soap">
@@ -911,6 +956,10 @@
       <wsdl:input message="tns:InsertReceiptUserSoapIn" />
       <wsdl:output message="tns:InsertReceiptUserSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <wsdl:input message="tns:InsertSignatureImageSoapIn" />
+      <wsdl:output message="tns:InsertSignatureImageSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <wsdl:input message="tns:UpdateReceiptUserSoapIn" />
       <wsdl:output message="tns:UpdateReceiptUserSoapOut" />
@@ -939,9 +988,9 @@
       <wsdl:input message="tns:InsertCustomerSatisfactionFarmasiSoapIn" />
       <wsdl:output message="tns:InsertCustomerSatisfactionFarmasiSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <wsdl:input message="tns:InsertCustomerSatisfactionRawatInapSoapIn" />
-      <wsdl:output message="tns:InsertCustomerSatisfactionRawatInapSoapOut" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <wsdl:input message="tns:InsertCustomerSatisfactionSoapIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebService1HttpGet">
@@ -993,6 +1042,10 @@
       <wsdl:input message="tns:InsertReceiptUserHttpGetIn" />
       <wsdl:output message="tns:InsertReceiptUserHttpGetOut" />
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <wsdl:input message="tns:InsertSignatureImageHttpGetIn" />
+      <wsdl:output message="tns:InsertSignatureImageHttpGetOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <wsdl:input message="tns:UpdateReceiptUserHttpGetIn" />
       <wsdl:output message="tns:UpdateReceiptUserHttpGetOut" />
@@ -1021,9 +1074,9 @@
       <wsdl:input message="tns:InsertCustomerSatisfactionFarmasiHttpGetIn" />
       <wsdl:output message="tns:InsertCustomerSatisfactionFarmasiHttpGetOut" />
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <wsdl:input message="tns:InsertCustomerSatisfactionRawatInapHttpGetIn" />
-      <wsdl:output message="tns:InsertCustomerSatisfactionRawatInapHttpGetOut" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <wsdl:input message="tns:InsertCustomerSatisfactionHttpGetIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionHttpGetOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:portType name="WebService1HttpPost">
@@ -1075,6 +1128,10 @@
       <wsdl:input message="tns:InsertReceiptUserHttpPostIn" />
       <wsdl:output message="tns:InsertReceiptUserHttpPostOut" />
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <wsdl:input message="tns:InsertSignatureImageHttpPostIn" />
+      <wsdl:output message="tns:InsertSignatureImageHttpPostOut" />
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <wsdl:input message="tns:UpdateReceiptUserHttpPostIn" />
       <wsdl:output message="tns:UpdateReceiptUserHttpPostOut" />
@@ -1103,9 +1160,9 @@
       <wsdl:input message="tns:InsertCustomerSatisfactionFarmasiHttpPostIn" />
       <wsdl:output message="tns:InsertCustomerSatisfactionFarmasiHttpPostOut" />
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <wsdl:input message="tns:InsertCustomerSatisfactionRawatInapHttpPostIn" />
-      <wsdl:output message="tns:InsertCustomerSatisfactionRawatInapHttpPostOut" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <wsdl:input message="tns:InsertCustomerSatisfactionHttpPostIn" />
+      <wsdl:output message="tns:InsertCustomerSatisfactionHttpPostOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
@@ -1218,6 +1275,15 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <soap:operation soapAction="http://tempuri.org/InsertSignatureImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <soap:operation soapAction="http://tempuri.org/UpdateReceiptUser" style="document" />
       <wsdl:input>
@@ -1281,8 +1347,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <soap:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionRawatInap" style="document" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <soap:operation soapAction="http://tempuri.org/InsertCustomerSatisfaction" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1401,6 +1467,15 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <soap12:operation soapAction="http://tempuri.org/InsertSignatureImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <soap12:operation soapAction="http://tempuri.org/UpdateReceiptUser" style="document" />
       <wsdl:input>
@@ -1464,8 +1539,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <soap12:operation soapAction="http://tempuri.org/InsertCustomerSatisfactionRawatInap" style="document" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <soap12:operation soapAction="http://tempuri.org/InsertCustomerSatisfaction" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -1584,6 +1659,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <http:operation location="/InsertSignatureImage" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <http:operation location="/UpdateReceiptUser" />
       <wsdl:input>
@@ -1647,8 +1731,8 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <http:operation location="/InsertCustomerSatisfactionRawatInap" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <http:operation location="/InsertCustomerSatisfaction" />
       <wsdl:input>
         <http:urlEncoded />
       </wsdl:input>
@@ -1767,6 +1851,15 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertSignatureImage">
+      <http:operation location="/InsertSignatureImage" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="UpdateReceiptUser">
       <http:operation location="/UpdateReceiptUser" />
       <wsdl:input>
@@ -1830,8 +1923,8 @@
         <mime:mimeXml part="Body" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertCustomerSatisfactionRawatInap">
-      <http:operation location="/InsertCustomerSatisfactionRawatInap" />
+    <wsdl:operation name="InsertCustomerSatisfaction">
+      <http:operation location="/InsertCustomerSatisfaction" />
       <wsdl:input>
         <mime:content type="application/x-www-form-urlencoded" />
       </wsdl:input>

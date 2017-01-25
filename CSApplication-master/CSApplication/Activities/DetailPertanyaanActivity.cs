@@ -33,7 +33,7 @@ namespace CSApplication.Activities
 
             DataSet ds = mService.GetDetailPertanyaanByPertanyaan(id);
             mDetailList = getDetailPertanyaan(ds);
-            mListView.Adapter = new Adapter.AdapterDetailPertanyaan(this, mDetailList);
+            //mListView.Adapter = new Adapter.AdapterDetailPertanyaan(this, mDetailList);
         }
 
         private List<DetailPertanyaanModel> getDetailPertanyaan(DataSet ds)

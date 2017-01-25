@@ -10,7 +10,7 @@
         android:id="@+id/linearLayout1">
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:id="@+id/lvPertanyaan" />
     </LinearLayout>
     <LinearLayout
@@ -18,7 +18,7 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="1"
         android:weightSum="2"
@@ -42,4 +42,11 @@
             android:background="#1565c0"
             android:id="@+id/idNext" />
     </LinearLayout>
+    <Button
+        android:text="KIRIM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="#4a148c"
+        android:id="@+id/button1" />
 </LinearLayout>

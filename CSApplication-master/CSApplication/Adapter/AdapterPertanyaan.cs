@@ -12,6 +12,7 @@ using Android.Widget;
 using CSApplication.Fragments;
 using CSApplication.Model;
 using System.Data;
+using CSApplication.Activities;
 
 namespace CSApplication.Adapter
 {
@@ -24,13 +25,14 @@ namespace CSApplication.Adapter
         private List<PertanyaanModel> mPertanyaanList;
         BaseAdapter parentAdapter;
         public static Context context;
+        private DBHelper dbHelper;
 
-     
-        
-        public AdapterPertanyaan(Activity context, List<PertanyaanModel> items)
+
+        public AdapterPertanyaan(Activity context, List<PertanyaanModel> items, DBHelper dbHelper)
         {
-            mItems = items;
-            mContext = context;
+            this.mItems = items;
+            this.mContext = context;
+            this.dbHelper = dbHelper;
 
         }
 
@@ -77,6 +79,10 @@ namespace CSApplication.Adapter
                 row = LayoutInflater.From(mContext).Inflate(Resource.Layout.layout_pertanyaan_adapter, parent, false);
                 TextView txtPertanyaan = row.FindViewById<TextView>(Resource.Id.textPertanyaan);
 
+                if (txtPertanyaan == null)
+                {
+                    Console.WriteLine("brrrrrrrrrrrrrrr");
+                }
                 CSService.WebService1 mService = new CSService.WebService1();
                 mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
 
@@ -84,14 +90,16 @@ namespace CSApplication.Adapter
                 mDetails = getDetailPertanyaan(ds);
 
                 ListView listDetail = row.FindViewById<ListView>(Resource.Id.lvDetail);
-                listDetail.Adapter = new AdapterDetailPertanyaan(mContext, mDetails);
+                listDetail.Adapter = new AdapterDetailPertanyaan(mContext, mDetails, dbHelper, mItems[position].getPertanyaanId());
                 txtPertanyaan.Text = mItems[position].getPertanyaanNama();
 
-                
-                
+
+
             }
             return row;
         }
+
+
 
         //public static List<DetailPertanyaanModel> listDetailPertanyaan(string id)
         //{
@@ -120,7 +128,7 @@ namespace CSApplication.Adapter
             return tempDetail;
         }
 
-   
+
 
 
     }

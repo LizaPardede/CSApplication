@@ -7,12 +7,14 @@ using System;
 using Android.Content;
 using CSApplication.Model;
 using CSApplication.Fragments;
+using Android.Runtime;
 
 namespace CSApplication
 {
     [Activity(Label = "Customer Satisfaction", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+        public const int FINISH_QUESTION = 0;
        
         private List<ModelDepartemen> mDepartemenList;
         private ListView mListView;
@@ -41,6 +43,7 @@ namespace CSApplication
             //Toast.MakeText(this, mDepartemen.getDepartemenId(), ToastLength.Long).Show();
             var intent = new Intent(this, typeof(Activities.PertanyaanPager));
             intent.PutExtra("idDepartemen", mDepartemen.getDepartemenId());
+            //StartActivityForResult(intent, FINISH_QUESTION);
             StartActivity(intent);
         }
 
@@ -56,6 +59,19 @@ namespace CSApplication
                 tempDepartemen.Add(mDepartemen);
             }
             return tempDepartemen;
+        }
+
+        protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
+        {
+            base.OnActivityResult(requestCode, resultCode, data);
+
+            if(requestCode == FINISH_QUESTION)
+            {
+                if(resultCode == Result.Ok)
+                {
+
+                }
+            }
         }
     }
 }

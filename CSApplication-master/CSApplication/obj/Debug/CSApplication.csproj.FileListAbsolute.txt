@@ -122,6 +122,9 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.pdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.CSApplication.apk
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.CSApplication-Signed.apk
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\SQLite-net.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\SQLitePCL.raw.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\SQLite-net.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.csprojResolveAssemblyReference.cache
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.pdb
@@ -147,6 +150,8 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\icon.png
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\values\styles.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\button.xml
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\next.png
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\previous.png
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\R.cs.flag
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\uploadflags.txt
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.dll.mdb
@@ -174,6 +179,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\Mono.Android.Export.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\Mono.Data.Tds.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\mscorlib.dll.mdb
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\SQLite-net.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.ComponentModel.Composition.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Core.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Data.dll.mdb
@@ -187,7 +193,5 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Web.Services.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Xml.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Xml.Linq.dll.mdb
-C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\previous.png
-C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\next.png
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.dll.mdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.dll.mdb

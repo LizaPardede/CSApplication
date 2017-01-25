@@ -69,20 +69,23 @@ namespace CSApplication
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f060016
-			public const int DataHeader = 2131099670;
+			// aapt resource value: 0x7f060017
+			public const int DataHeader = 2131099671;
 			
 			// aapt resource value: 0x7f060000
 			public const int DataId = 2131099648;
 			
-			// aapt resource value: 0x7f06000f
-			public const int btnKirim = 2131099663;
+			// aapt resource value: 0x7f060010
+			public const int btnKirim = 2131099664;
 			
 			// aapt resource value: 0x7f06000e
-			public const int expandableListView1 = 2131099662;
+			public const int button1 = 2131099662;
 			
-			// aapt resource value: 0x7f060018
-			public const int fragment1 = 2131099672;
+			// aapt resource value: 0x7f06000f
+			public const int expandableListView1 = 2131099663;
+			
+			// aapt resource value: 0x7f060019
+			public const int fragment1 = 2131099673;
 			
 			// aapt resource value: 0x7f06000d
 			public const int idNext = 2131099661;
@@ -96,8 +99,8 @@ namespace CSApplication
 			// aapt resource value: 0x7f06000b
 			public const int linearLayout2 = 2131099659;
 			
-			// aapt resource value: 0x7f060017
-			public const int listDepartemen = 2131099671;
+			// aapt resource value: 0x7f060018
+			public const int listDepartemen = 2131099672;
 			
 			// aapt resource value: 0x7f060005
 			public const int listDetailPertanyaan = 2131099653;
@@ -105,14 +108,14 @@ namespace CSApplication
 			// aapt resource value: 0x7f060007
 			public const int listDokter = 2131099655;
 			
-			// aapt resource value: 0x7f060013
-			public const int listPertanyaanRj = 2131099667;
-			
 			// aapt resource value: 0x7f060014
-			public const int listPoli = 2131099668;
+			public const int listPertanyaanRj = 2131099668;
 			
-			// aapt resource value: 0x7f060011
-			public const int lvDetail = 2131099665;
+			// aapt resource value: 0x7f060015
+			public const int listPoli = 2131099669;
+			
+			// aapt resource value: 0x7f060012
+			public const int lvDetail = 2131099666;
 			
 			// aapt resource value: 0x7f06000a
 			public const int lvPertanyaan = 2131099658;
@@ -135,14 +138,14 @@ namespace CSApplication
 			// aapt resource value: 0x7f060008
 			public const int textDokter = 2131099656;
 			
-			// aapt resource value: 0x7f060010
-			public const int textPertanyaan = 2131099664;
+			// aapt resource value: 0x7f060011
+			public const int textPertanyaan = 2131099665;
 			
-			// aapt resource value: 0x7f060015
-			public const int textPoli = 2131099669;
+			// aapt resource value: 0x7f060016
+			public const int textPoli = 2131099670;
 			
-			// aapt resource value: 0x7f060012
-			public const int textView1 = 2131099666;
+			// aapt resource value: 0x7f060013
+			public const int textView1 = 2131099667;
 			
 			static Id()
 			{

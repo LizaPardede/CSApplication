@@ -13,11 +13,10 @@
         android:padding="5dp"
         android:textColor="#343434"
         android:lineSpacingExtra="5dp"
-        android:id="@+id/textDetailPertanyaan"/>
+        android:id="@+id/textDetailPertanyaan" />
     <RadioGroup
         android:minWidth="25px"
         android:minHeight="25px"
-        android:layout_below="@+id/textDetailPertanyaan"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +24,6 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:paddingRight="50dp"
             android:text="Setuju"
             android:id="@+id/radioButton1" />

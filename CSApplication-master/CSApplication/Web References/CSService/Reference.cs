@@ -54,6 +54,8 @@ namespace CSApplication.CSService {
         
         private System.Threading.SendOrPostCallback InsertReceiptUserOperationCompleted;
         
+        private System.Threading.SendOrPostCallback InsertSignatureImageOperationCompleted;
+        
         private System.Threading.SendOrPostCallback UpdateReceiptUserOperationCompleted;
         
         private System.Threading.SendOrPostCallback DeleteDataReceiptOperationCompleted;
@@ -68,7 +70,7 @@ namespace CSApplication.CSService {
         
         private System.Threading.SendOrPostCallback InsertCustomerSatisfactionFarmasiOperationCompleted;
         
-        private System.Threading.SendOrPostCallback InsertCustomerSatisfactionRawatInapOperationCompleted;
+        private System.Threading.SendOrPostCallback InsertCustomerSatisfactionOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
         
@@ -145,6 +147,9 @@ namespace CSApplication.CSService {
         public event InsertReceiptUserCompletedEventHandler InsertReceiptUserCompleted;
         
         /// <remarks/>
+        public event InsertSignatureImageCompletedEventHandler InsertSignatureImageCompleted;
+        
+        /// <remarks/>
         public event UpdateReceiptUserCompletedEventHandler UpdateReceiptUserCompleted;
         
         /// <remarks/>
@@ -166,7 +171,7 @@ namespace CSApplication.CSService {
         public event InsertCustomerSatisfactionFarmasiCompletedEventHandler InsertCustomerSatisfactionFarmasiCompleted;
         
         /// <remarks/>
-        public event InsertCustomerSatisfactionRawatInapCompletedEventHandler InsertCustomerSatisfactionRawatInapCompleted;
+        public event InsertCustomerSatisfactionCompletedEventHandler InsertCustomerSatisfactionCompleted;
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/GetDataReg", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
@@ -541,6 +546,41 @@ namespace CSApplication.CSService {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertSignatureImage", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet InsertSignatureImage(string ID, string Image_Url, string Description, string user) {
+            object[] results = this.Invoke("InsertSignatureImage", new object[] {
+                        ID,
+                        Image_Url,
+                        Description,
+                        user});
+            return ((System.Data.DataSet)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void InsertSignatureImageAsync(string ID, string Image_Url, string Description, string user) {
+            this.InsertSignatureImageAsync(ID, Image_Url, Description, user, null);
+        }
+        
+        /// <remarks/>
+        public void InsertSignatureImageAsync(string ID, string Image_Url, string Description, string user, object userState) {
+            if ((this.InsertSignatureImageOperationCompleted == null)) {
+                this.InsertSignatureImageOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertSignatureImageOperationCompleted);
+            }
+            this.InvokeAsync("InsertSignatureImage", new object[] {
+                        ID,
+                        Image_Url,
+                        Description,
+                        user}, this.InsertSignatureImageOperationCompleted, userState);
+        }
+        
+        private void OnInsertSignatureImageOperationCompleted(object arg) {
+            if ((this.InsertSignatureImageCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.InsertSignatureImageCompleted(this, new InsertSignatureImageCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/UpdateReceiptUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         public System.Data.DataSet UpdateReceiptUser(string User_ID, string User_Name, string User_Password, string user) {
             object[] results = this.Invoke("UpdateReceiptUser", new object[] {
@@ -774,41 +814,39 @@ namespace CSApplication.CSService {
         }
         
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertCustomerSatisfactionRawatInap", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet InsertCustomerSatisfactionRawatInap(string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, System.DateTime EndTime, string user) {
-            object[] results = this.Invoke("InsertCustomerSatisfactionRawatInap", new object[] {
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertCustomerSatisfaction", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public System.Data.DataSet InsertCustomerSatisfaction(string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, string user) {
+            object[] results = this.Invoke("InsertCustomerSatisfaction", new object[] {
                         Kategori_ID,
                         Pertanyaan_ID,
                         Detail_Pertanyaan_ID,
                         StartTime,
-                        EndTime,
                         user});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void InsertCustomerSatisfactionRawatInapAsync(string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, System.DateTime EndTime, string user) {
-            this.InsertCustomerSatisfactionRawatInapAsync(Kategori_ID, Pertanyaan_ID, Detail_Pertanyaan_ID, StartTime, EndTime, user, null);
+        public void InsertCustomerSatisfactionAsync(string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, string user) {
+            this.InsertCustomerSatisfactionAsync(Kategori_ID, Pertanyaan_ID, Detail_Pertanyaan_ID, StartTime, user, null);
         }
         
         /// <remarks/>
-        public void InsertCustomerSatisfactionRawatInapAsync(string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, System.DateTime EndTime, string user, object userState) {
-            if ((this.InsertCustomerSatisfactionRawatInapOperationCompleted == null)) {
-                this.InsertCustomerSatisfactionRawatInapOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertCustomerSatisfactionRawatInapOperationCompleted);
+        public void InsertCustomerSatisfactionAsync(string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, string user, object userState) {
+            if ((this.InsertCustomerSatisfactionOperationCompleted == null)) {
+                this.InsertCustomerSatisfactionOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertCustomerSatisfactionOperationCompleted);
             }
-            this.InvokeAsync("InsertCustomerSatisfactionRawatInap", new object[] {
+            this.InvokeAsync("InsertCustomerSatisfaction", new object[] {
                         Kategori_ID,
                         Pertanyaan_ID,
                         Detail_Pertanyaan_ID,
                         StartTime,
-                        EndTime,
-                        user}, this.InsertCustomerSatisfactionRawatInapOperationCompleted, userState);
+                        user}, this.InsertCustomerSatisfactionOperationCompleted, userState);
         }
         
-        private void OnInsertCustomerSatisfactionRawatInapOperationCompleted(object arg) {
-            if ((this.InsertCustomerSatisfactionRawatInapCompleted != null)) {
+        private void OnInsertCustomerSatisfactionOperationCompleted(object arg) {
+            if ((this.InsertCustomerSatisfactionCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.InsertCustomerSatisfactionRawatInapCompleted(this, new InsertCustomerSatisfactionRawatInapCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+                this.InsertCustomerSatisfactionCompleted(this, new InsertCustomerSatisfactionCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1145,6 +1183,32 @@ namespace CSApplication.CSService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    public delegate void InsertSignatureImageCompletedEventHandler(object sender, InsertSignatureImageCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class InsertSignatureImageCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal InsertSignatureImageCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public System.Data.DataSet Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((System.Data.DataSet)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     public delegate void UpdateReceiptUserCompletedEventHandler(object sender, UpdateReceiptUserCompletedEventArgs e);
     
     /// <remarks/>
@@ -1327,17 +1391,17 @@ namespace CSApplication.CSService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
-    public delegate void InsertCustomerSatisfactionRawatInapCompletedEventHandler(object sender, InsertCustomerSatisfactionRawatInapCompletedEventArgs e);
+    public delegate void InsertCustomerSatisfactionCompletedEventHandler(object sender, InsertCustomerSatisfactionCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1586.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class InsertCustomerSatisfactionRawatInapCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+    public partial class InsertCustomerSatisfactionCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
-        internal InsertCustomerSatisfactionRawatInapCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+        internal InsertCustomerSatisfactionCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }

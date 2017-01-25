@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>19/01/2017 20:29:52</xs:documentation>
+    <xs:documentation>2017-01-24 9:19:47 AM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -775,6 +775,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -1408,6 +1410,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -2080,6 +2084,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -2442,6 +2448,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -2755,6 +2763,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -3378,6 +3388,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -3695,6 +3707,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -4028,6 +4042,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -4304,6 +4320,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -4557,6 +4575,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -5128,6 +5148,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -5545,6 +5567,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -5928,6 +5952,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -6366,6 +6392,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -6679,6 +6707,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -6992,6 +7022,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -7345,6 +7377,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -7658,6 +7692,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -8081,6 +8117,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -8450,6 +8488,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -8727,6 +8767,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -9162,6 +9204,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -9571,6 +9615,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -10098,6 +10144,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -10563,6 +10611,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -10998,6 +11048,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -11609,6 +11661,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -11844,6 +11898,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -12079,6 +12135,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -12314,6 +12372,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -12549,6 +12609,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -12784,6 +12846,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -13019,6 +13083,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -13254,6 +13320,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -13683,6 +13751,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -13945,6 +14015,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -14180,6 +14252,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -14415,6 +14489,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -14650,6 +14726,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -14925,6 +15003,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -15160,6 +15240,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -15473,6 +15555,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -15748,6 +15832,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16074,6 +16160,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16309,6 +16397,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -16762,6 +16852,7 @@
             <xs:enumeration value="@+id/" />
             <xs:enumeration value="@+id/checkBox1" />
             <xs:enumeration value="@id/btnKirim" />
+            <xs:enumeration value="@id/button1" />
             <xs:enumeration value="@id/DataHeader" />
             <xs:enumeration value="@id/DataId" />
             <xs:enumeration value="@id/expandableListView1" />
@@ -16862,6 +16953,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -17207,6 +17300,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -17537,6 +17632,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -18100,6 +18197,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -18421,6 +18520,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -18816,6 +18917,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -19171,6 +19274,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -19422,6 +19527,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -20118,6 +20225,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -20475,6 +20584,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -21466,6 +21577,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -21713,6 +21826,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -21989,6 +22104,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -22264,6 +22381,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -22499,6 +22618,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -22734,6 +22855,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -22969,6 +23092,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -23204,6 +23329,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -23912,6 +24039,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -24164,6 +24293,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -24477,6 +24608,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -25183,6 +25316,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -25536,6 +25671,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -25952,6 +26089,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -26297,6 +26436,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -26532,6 +26673,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -27311,6 +27454,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -27546,6 +27691,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -27781,6 +27928,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -28016,6 +28165,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -28431,6 +28582,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -28666,6 +28819,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -29069,6 +29224,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -29304,6 +29461,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -29617,6 +29776,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -30295,6 +30456,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -30823,6 +30986,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -31194,6 +31359,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -32381,6 +32548,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -32657,6 +32826,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -32983,6 +33154,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -33298,6 +33471,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -33533,6 +33708,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -33808,6 +33985,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -34043,6 +34222,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -34425,6 +34606,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -34660,6 +34843,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -34973,6 +35158,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -35286,6 +35473,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -35599,6 +35788,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -35912,6 +36103,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -36173,6 +36366,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -36408,6 +36603,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -36643,6 +36840,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -36878,6 +37077,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -37113,6 +37314,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -37522,6 +37725,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -37757,6 +37962,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -37992,6 +38199,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -39165,6 +39374,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -39990,6 +40201,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -40396,6 +40609,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -41146,6 +41361,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -41607,6 +41824,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -41858,6 +42077,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -42093,6 +42314,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -42328,6 +42551,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -42641,6 +42866,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:color/background_dark" />
             <xs:enumeration value="@android:color/background_light" />
             <xs:enumeration value="@android:color/black" />
@@ -43006,6 +43233,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />
@@ -43241,6 +43470,8 @@
           <xs:restriction base="xs:string">
             <xs:enumeration value="@drawable/button" />
             <xs:enumeration value="@drawable/icon" />
+            <xs:enumeration value="@drawable/next" />
+            <xs:enumeration value="@drawable/previous" />
             <xs:enumeration value="@android:drawable/alert_dark_frame" />
             <xs:enumeration value="@android:drawable/alert_light_frame" />
             <xs:enumeration value="@android:drawable/arrow_down_float" />

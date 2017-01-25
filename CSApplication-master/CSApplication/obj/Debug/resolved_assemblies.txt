@@ -10,6 +10,8 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Web.Services.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Xml.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Xml.Linq.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\SQLite-net.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\SQLitePCL.raw.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Threading.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Runtime.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.ComponentModel.Composition.dll
@@ -27,3 +29,6 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Numerics.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\Mono.Data.Tds.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Transactions.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Linq.Expressions.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Threading.Tasks.dll
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\assets\System.Resources.ResourceManager.dll

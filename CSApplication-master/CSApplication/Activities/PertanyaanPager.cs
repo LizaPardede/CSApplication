@@ -18,17 +18,28 @@ namespace CSApplication.Activities
     [Activity(Label = "PertanyaanPager")]
     public class PertanyaanPager : Activity
     {
-        
-        Button nextBtn, prevBtn;
+
+        Button nextBtn, prevBtn, sendBtn;
         Paginator p;
         private int totalPages = Paginator.TOTAL_NUM_ITEMS / Paginator.ITEMS_PER_PAGE;
         private int currentPage = 0;
-        
+        private DBHelper dbHelper;
 
         private List<PertanyaanModel> mPertanyaanList;
         private ListView mListView;
 
+        private string user;
+        private DateTime starttime;
+        private string kategori = "";
+
+        private static string pertanyaanSetuju = "";
+        private static string pertanyaanTidakSetuju = "";
+        private static string detailSetuju = "";
+        private static string detailTidakSetuju = "";
+        
         int sizeOfList;
+
+        private CSService.WebService1 mService = new CSService.WebService1();
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -36,39 +47,100 @@ namespace CSApplication.Activities
             SetContentView(Resource.Layout.layout_pager);
             string id = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
 
-            mPertanyaanList = new List<PertanyaanModel>();
-            mListView = FindViewById<ListView>(Resource.Id.lvPertanyaan);
-            
-            
-            CSService.WebService1 mService = new CSService.WebService1();
-            mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
+            initComponents();
 
             DataSet ds = mService.GetPertanyaanByDepartmen(id);
             mPertanyaanList = getPertanyaanList(ds);
-            
+
             p = new Paginator(mPertanyaanList);
 
-            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage));
+            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
 
             sizeOfList = mPertanyaanList.Count();
             Console.Write("Emak");
             Console.WriteLine(sizeOfList);
 
-            nextBtn = FindViewById<Button>(Resource.Id.idNext);
-            prevBtn = FindViewById<Button>(Resource.Id.idPrev);
-            //sendBtn = FindViewById<Button>(Resource.Id.btnKirim);
-            prevBtn.Enabled = false;
+            initListener();
+        }
 
+        private void initListener()
+        {
             nextBtn.Click += NextBtn_Click;
             prevBtn.Click += PrevBtn_Click;
+            sendBtn.Click += SendBtn_Click;
+        }
 
+        private void initComponents()
+        {
+            mPertanyaanList = new List<PertanyaanModel>();
+            mListView = FindViewById<ListView>(Resource.Id.lvPertanyaan);
+            nextBtn = FindViewById<Button>(Resource.Id.idNext);
+            prevBtn = FindViewById<Button>(Resource.Id.idPrev);
+            sendBtn = FindViewById<Button>(Resource.Id.button1);
+            mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
+            dbHelper = new DBHelper();
+        }
+
+        private void SendBtn_Click(object sender, EventArgs e)
+        {
+            List<UserResult> userResult = new List<UserResult>();
+            userResult = dbHelper.selectTableResult();
+            
+            foreach (UserResult user in userResult)
+            {
+                if(user == null)
+                {
+                    Console.Write("Empty");
+                }
+
+                if (user.kategori_id != null || user.pertanyaan_id != null || user.detail_pertanyaan_id != null || user.starttime != null || user.user != null)
+                {
+                    if (user.kategori_id == "1")
+                    {
+                        if(pertanyaanSetuju == "" || detailSetuju == "")
+                        {
+                            pertanyaanSetuju += user.pertanyaan_id;
+                            detailSetuju += user.detail_pertanyaan_id;
+                        }         
+                    }
+                    else 
+                        {
+                        if (pertanyaanTidakSetuju == "" || detailTidakSetuju == "")
+                        {
+                            pertanyaanTidakSetuju += user.pertanyaan_id;
+                            detailTidakSetuju += user.detail_pertanyaan_id;
+                        }
+                        //else
+                        //{
+                        //    pertanyaanTidakSetuju += "," + user.pertanyaan_id;
+                        //    detailTidakSetuju += "," + user.detail_pertanyaan_id;
+                        //}
+
+                    }                    
+                }
+            }
+
+            try
+            {
+                if (kategori == "1")
+                {
+                    mService.InsertCustomerSatisfaction("1", pertanyaanSetuju, detailSetuju, DateTime.Now, "Customer");
+                }
+                else {
+                    mService.InsertCustomerSatisfaction("2", pertanyaanTidakSetuju, detailTidakSetuju, DateTime.Now, "Customer");
+                }
+            }
+            catch (Exception ex)
+            {
+                Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
+            }
         }
 
         private List<PertanyaanModel> getPertanyaanList(DataSet ds)
         {
             List<PertanyaanModel> tempDokter = new List<PertanyaanModel>();
             PertanyaanModel mPertanyaan = null;
-            
+
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 mPertanyaan = new PertanyaanModel();
@@ -76,23 +148,35 @@ namespace CSApplication.Activities
                 mPertanyaan.setPertanyaanNama(dr["Nama_Pertanyaan"].ToString());
                 tempDokter.Add(mPertanyaan);
             }
-            
+
             return tempDokter;
         }
 
         private void PrevBtn_Click(object sender, System.EventArgs e)
         {
-            currentPage -= 1;
-            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage));
-            toggleButton();
+            if (currentPage > 0)
+                currentPage -= 1;
+            
+            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
+            //toggleButton();
         }
 
         private void NextBtn_Click(object sender, System.EventArgs e)
         {
-            currentPage +=1;
-            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage));
-            toggleButton();
+            if (currentPage < sizeOfList - 1)
+                currentPage += 1;
+            
+            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
+            if (currentPage == sizeOfList - 1)
+            {
+                sendBtn.Visibility = ViewStates.Visible;
+                nextBtn.Visibility = ViewStates.Gone;
+                prevBtn.Visibility = ViewStates.Gone;
+            }
         }
+
+
+
 
         private void toggleButton()
         {

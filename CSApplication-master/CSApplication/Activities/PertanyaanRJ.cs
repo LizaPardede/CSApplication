@@ -34,7 +34,7 @@ namespace CSApplication.Activities
 
             DataSet ds = mService.GetPertanyaanByDepartmen(idDep);
             mPrjList = getPrj(ds);
-            mListView.Adapter = new AdapterPertanyaan(this, mPrjList);
+            //mListView.Adapter = new AdapterPertanyaan(this, mPrjList);
             mListView.ItemClick += MListView_ItemClick;
         }
 
