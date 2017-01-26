@@ -74,9 +74,7 @@ namespace CSApplication.Adapter
             
             radioTidak.Click += (object sender, EventArgs e) =>
             {
-                Console.WriteLine("Ayaaaammmmm");
                 RadioButton checkedRadioButton = row.FindViewById<RadioButton>(radioGroup.CheckedRadioButtonId);
-                Toast.MakeText(mContext, mItems[position].getIdDetail(), ToastLength.Long).Show();
                 UserResult userResult = new UserResult()
                 {
                     kategori_id = "2",
@@ -84,21 +82,13 @@ namespace CSApplication.Adapter
                     detail_pertanyaan_id = mItems[position].getIdDetail(),
                     starttime = DateTime.Now,
                     user = "Customer"
-
                 };
-
                 dbHelper.InsertIntoTableResult(userResult);
-
-               
-
-
             };
 
             radioSetuju.Click += (object sender, EventArgs e) =>
             {
-                Console.WriteLine("Ayaaaammmmm");
                 RadioButton checkedRadioButton = row.FindViewById<RadioButton>(radioGroup.CheckedRadioButtonId);
-                Toast.MakeText(mContext, mItems[position].getIdDetail(), ToastLength.Long).Show();
                 UserResult userResult = new UserResult()
                 {
                     kategori_id = "1",
@@ -107,11 +97,8 @@ namespace CSApplication.Adapter
                     starttime = DateTime.Now,
                     user = "Customer"
                 };
-
-                dbHelper.InsertIntoTableResult(userResult);
-                
+                dbHelper.InsertIntoTableResult(userResult);  
             };
-
             return row;
         }
     }

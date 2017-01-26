@@ -21,9 +21,10 @@ namespace CSApplication.Activities
         //public const String ENDTIME = "EndTime";
         //public const String USER = "user";
 
+        [SQLite.PrimaryKey]
+        public string detail_pertanyaan_id { get; set; }
         public string kategori_id { get; set; }
         public string pertanyaan_id { get; set; }
-        public string detail_pertanyaan_id { get; set; }
         public DateTime starttime { get; set; }
 
         public string user { get; set; }

@@ -18,7 +18,7 @@ namespace CSApplication.Activities
     [Activity(Label = "PertanyaanPager")]
     public class PertanyaanPager : Activity
     {
-
+        //PAGINATION
         Button nextBtn, prevBtn, sendBtn;
         Paginator p;
         private int totalPages = Paginator.TOTAL_NUM_ITEMS / Paginator.ITEMS_PER_PAGE;
@@ -27,11 +27,7 @@ namespace CSApplication.Activities
 
         private List<PertanyaanModel> mPertanyaanList;
         private ListView mListView;
-
-        private string user;
-        private DateTime starttime;
-        private string kategori = "";
-
+        
         private static string pertanyaanSetuju = "";
         private static string pertanyaanTidakSetuju = "";
         private static string detailSetuju = "";
@@ -85,7 +81,8 @@ namespace CSApplication.Activities
         {
             List<UserResult> userResult = new List<UserResult>();
             userResult = dbHelper.selectTableResult();
-            
+            string tempSetuju = "";
+            string tempTidakSetuju = "";
             foreach (UserResult user in userResult)
             {
                 if(user == null)
@@ -97,43 +94,100 @@ namespace CSApplication.Activities
                 {
                     if (user.kategori_id == "1")
                     {
-                        if(pertanyaanSetuju == "" || detailSetuju == "")
+                        
+                        if( tempSetuju == user.pertanyaan_id)
                         {
-                            pertanyaanSetuju += user.pertanyaan_id;
-                            detailSetuju += user.detail_pertanyaan_id;
-                        }         
+                            if (detailSetuju == "")
+                            {
+                                detailSetuju += user.detail_pertanyaan_id;
+                            }
+                            else
+                            {
+                                detailSetuju += "," + user.detail_pertanyaan_id;
+                            }
+                        }else
+                        {
+                            if (pertanyaanSetuju == "")
+                            {
+                                pertanyaanSetuju += user.pertanyaan_id;
+                            }
+                            else
+                            {
+                                pertanyaanSetuju += "," + user.pertanyaan_id;
+                            }
+
+                            if (detailSetuju == "")
+                            {
+                                detailSetuju += user.detail_pertanyaan_id;
+                            }
+                            else
+                            {
+                                detailSetuju += "," + user.detail_pertanyaan_id;
+                            }
+                        }
+                        tempSetuju = user.pertanyaan_id;
                     }
                     else 
+
+                    if(tempTidakSetuju == user.pertanyaan_id)
+                    {
+
+                        if (detailTidakSetuju == "")
                         {
-                        if (pertanyaanTidakSetuju == "" || detailTidakSetuju == "")
-                        {
-                            pertanyaanTidakSetuju += user.pertanyaan_id;
                             detailTidakSetuju += user.detail_pertanyaan_id;
                         }
-                        //else
-                        //{
-                        //    pertanyaanTidakSetuju += "," + user.pertanyaan_id;
-                        //    detailTidakSetuju += "," + user.detail_pertanyaan_id;
-                        //}
+                        else
+                        {
+                            detailTidakSetuju += "," + user.detail_pertanyaan_id;
+                        }
+                    }else
+                    {
+                        {
+                            if (pertanyaanTidakSetuju == "")
+                            {
+                                pertanyaanTidakSetuju += user.pertanyaan_id;
+                            }
+                            else
+                            {
+                                pertanyaanTidakSetuju += "," + user.pertanyaan_id;
+                            }
 
-                    }                    
+                            if (detailTidakSetuju == "")
+                            {
+                                detailTidakSetuju += user.detail_pertanyaan_id;
+                            }
+                            else
+                            {
+                                detailTidakSetuju += "," + user.detail_pertanyaan_id;
+                            }
+                        }
+                        tempTidakSetuju = user.pertanyaan_id;
+
+                    }
+                                    
                 }
             }
 
             try
             {
-                if (kategori == "1")
+                if (detailSetuju !="")
                 {
                     mService.InsertCustomerSatisfaction("1", pertanyaanSetuju, detailSetuju, DateTime.Now, "Customer");
+                    
                 }
-                else {
+               if (detailTidakSetuju !="")
+                {
                     mService.InsertCustomerSatisfaction("2", pertanyaanTidakSetuju, detailTidakSetuju, DateTime.Now, "Customer");
                 }
+
+                
+
             }
             catch (Exception ex)
             {
                 Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
             }
+            dbHelper.deleteData(userResult);
         }
 
         private List<PertanyaanModel> getPertanyaanList(DataSet ds)

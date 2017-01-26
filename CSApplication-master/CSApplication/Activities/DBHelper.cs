@@ -50,7 +50,10 @@ namespace CSApplication.Activities
                 //}
 
                 var db = new SQLite.SQLiteAsyncConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db"));
-                db.InsertAsync(userResult);
+                if (db.InsertAsync(userResult) != null) {
+                    db.UpdateAsync(userResult);
+                }
+                
                 return true;
 
             }
@@ -81,13 +84,16 @@ namespace CSApplication.Activities
             }
         }
 
-        public bool selectQueryTableResult(int id)
+        public bool deleteData(List<UserResult> userResult)
         {
             try
             {
                 using (var connection = new SQLite.SQLiteConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db")))
                 {
-                    connection.Query<UserResult>("SELECT * FROM UserResult Where Detail_Pertanyaan_ID=?", id);
+                    foreach(UserResult user in userResult)
+                    {
+                        connection.Delete(user);
+                    }
                     return true;
                 }
 
@@ -99,9 +105,6 @@ namespace CSApplication.Activities
 
             }
         }
-
-
-
-
+        
     }
 }
