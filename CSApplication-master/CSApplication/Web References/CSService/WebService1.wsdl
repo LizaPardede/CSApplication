@@ -388,7 +388,6 @@
             <s:element minOccurs="0" maxOccurs="1" name="Pertanyaan_ID" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="Detail_Pertanyaan_ID" type="s:string" />
             <s:element minOccurs="1" maxOccurs="1" name="StartTime" type="s:dateTime" />
-            <s:element minOccurs="1" maxOccurs="1" name="EndTime" type="s:dateTime" />
             <s:element minOccurs="0" maxOccurs="1" name="user" type="s:string" />
           </s:sequence>
         </s:complexType>
@@ -724,7 +723,6 @@
     <wsdl:part name="Pertanyaan_ID" type="s:string" />
     <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
     <wsdl:part name="StartTime" type="s:string" />
-    <wsdl:part name="EndTime" type="s:string" />
     <wsdl:part name="user" type="s:string" />
   </wsdl:message>
   <wsdl:message name="InsertCustomerSatisfactionRawatJalanHttpGetOut">
@@ -880,7 +878,6 @@
     <wsdl:part name="Pertanyaan_ID" type="s:string" />
     <wsdl:part name="Detail_Pertanyaan_ID" type="s:string" />
     <wsdl:part name="StartTime" type="s:string" />
-    <wsdl:part name="EndTime" type="s:string" />
     <wsdl:part name="user" type="s:string" />
   </wsdl:message>
   <wsdl:message name="InsertCustomerSatisfactionRawatJalanHttpPostOut">

@@ -12,12 +12,14 @@ using Android.Widget;
 
 namespace CSApplication.Activities
 {
-    class UserResult
+    class ResultRawatJalan
     {
         [SQLite.PrimaryKey]
-        public string detail_pertanyaan_id { get; set; }
+        public string poly_id { get; set; }
+        public string doctor_id { get; set; }
         public string kategori_id { get; set; }
         public string pertanyaan_id { get; set; }
+        public string detail_pertanyaan_id { get; set; }
         public DateTime starttime { get; set; }
         public string user { get; set; }
     }

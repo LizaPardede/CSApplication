@@ -19,13 +19,18 @@ namespace CSApplication.Activities
     public class PoliActivity : Activity
     {
         private List<PoliModel> mPoliList;
-        private ListView mListView; 
+        private ListView mListView;
+        private string idDep;
 
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+        }
         protected override void OnCreate(Bundle savedInstanceState)
         {  
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.layout_poli);
-            string id = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
+            idDep = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
 
             mListView = FindViewById<ListView>(Resource.Id.listPoli);
             mPoliList = new List<PoliModel>();
@@ -45,8 +50,8 @@ namespace CSApplication.Activities
             var mPoli = mPoliList[e.Position];
             var intent = new Intent(this, typeof(DokterActivity));
             intent.PutExtra("idPoli", mPoli.getPoliId());
-            intent.PutExtra("idDepartemen", mPoli.getDepartemenId());
-            StartActivity(intent);  
+            intent.PutExtra("idDepartemen", idDep);
+            StartActivity(intent); 
         }
 
         private List<PoliModel> getPoliName(DataSet ds)

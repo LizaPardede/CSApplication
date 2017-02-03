@@ -733,7 +733,7 @@ namespace CSApplication.CSService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/InsertCustomerSatisfactionRawatJalan", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public System.Data.DataSet InsertCustomerSatisfactionRawatJalan(string Poly_ID, string Doctor_ID, string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, System.DateTime EndTime, string user) {
+        public System.Data.DataSet InsertCustomerSatisfactionRawatJalan(string Poly_ID, string Doctor_ID, string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, string user) {
             object[] results = this.Invoke("InsertCustomerSatisfactionRawatJalan", new object[] {
                         Poly_ID,
                         Doctor_ID,
@@ -741,18 +741,17 @@ namespace CSApplication.CSService {
                         Pertanyaan_ID,
                         Detail_Pertanyaan_ID,
                         StartTime,
-                        EndTime,
                         user});
             return ((System.Data.DataSet)(results[0]));
         }
         
         /// <remarks/>
-        public void InsertCustomerSatisfactionRawatJalanAsync(string Poly_ID, string Doctor_ID, string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, System.DateTime EndTime, string user) {
-            this.InsertCustomerSatisfactionRawatJalanAsync(Poly_ID, Doctor_ID, Kategori_ID, Pertanyaan_ID, Detail_Pertanyaan_ID, StartTime, EndTime, user, null);
+        public void InsertCustomerSatisfactionRawatJalanAsync(string Poly_ID, string Doctor_ID, string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, string user) {
+            this.InsertCustomerSatisfactionRawatJalanAsync(Poly_ID, Doctor_ID, Kategori_ID, Pertanyaan_ID, Detail_Pertanyaan_ID, StartTime, user, null);
         }
         
         /// <remarks/>
-        public void InsertCustomerSatisfactionRawatJalanAsync(string Poly_ID, string Doctor_ID, string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, System.DateTime EndTime, string user, object userState) {
+        public void InsertCustomerSatisfactionRawatJalanAsync(string Poly_ID, string Doctor_ID, string Kategori_ID, string Pertanyaan_ID, string Detail_Pertanyaan_ID, System.DateTime StartTime, string user, object userState) {
             if ((this.InsertCustomerSatisfactionRawatJalanOperationCompleted == null)) {
                 this.InsertCustomerSatisfactionRawatJalanOperationCompleted = new System.Threading.SendOrPostCallback(this.OnInsertCustomerSatisfactionRawatJalanOperationCompleted);
             }
@@ -763,7 +762,6 @@ namespace CSApplication.CSService {
                         Pertanyaan_ID,
                         Detail_Pertanyaan_ID,
                         StartTime,
-                        EndTime,
                         user}, this.InsertCustomerSatisfactionRawatJalanOperationCompleted, userState);
         }
         

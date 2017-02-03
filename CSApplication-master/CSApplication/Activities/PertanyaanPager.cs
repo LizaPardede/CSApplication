@@ -27,12 +27,12 @@ namespace CSApplication.Activities
 
         private List<PertanyaanModel> mPertanyaanList;
         private ListView mListView;
-        
+
         private static string pertanyaanSetuju = "";
         private static string pertanyaanTidakSetuju = "";
         private static string detailSetuju = "";
         private static string detailTidakSetuju = "";
-        
+
         int sizeOfList;
 
         private CSService.WebService1 mService = new CSService.WebService1();
@@ -43,39 +43,51 @@ namespace CSApplication.Activities
             SetContentView(Resource.Layout.layout_pager);
             string id = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
 
-            initComponents();
+            //DataSet ds = mService.GetPertanyaanByDepartmen(id);
+            //mPertanyaanList = getPertanyaanList(ds);
+            DataSet ds;
 
-            DataSet ds = mService.GetPertanyaanByDepartmen(id);
-            mPertanyaanList = getPertanyaanList(ds);
-
-            p = new Paginator(mPertanyaanList);
-
-            mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
-
-            sizeOfList = mPertanyaanList.Count();
-            Console.Write("Emak");
-            Console.WriteLine(sizeOfList);
-
-            initListener();
-        }
-
-        private void initListener()
-        {
-            nextBtn.Click += NextBtn_Click;
-            prevBtn.Click += PrevBtn_Click;
-            sendBtn.Click += SendBtn_Click;
-        }
-
-        private void initComponents()
-        {
-            mPertanyaanList = new List<PertanyaanModel>();
-            mListView = FindViewById<ListView>(Resource.Id.lvPertanyaan);
-            nextBtn = FindViewById<Button>(Resource.Id.idNext);
-            prevBtn = FindViewById<Button>(Resource.Id.idPrev);
-            sendBtn = FindViewById<Button>(Resource.Id.button1);
-            mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
             dbHelper = new DBHelper();
+
+            if (id == "Dep1" || id == "Dep3")
+            {
+                mPertanyaanList = new List<PertanyaanModel>();
+                mListView = FindViewById<ListView>(Resource.Id.lvPertanyaan);
+
+                mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
+
+                ds = mService.GetPertanyaanByDepartmen(id);
+                mPertanyaanList = getPertanyaanList(ds);
+
+                p = new Paginator(mPertanyaanList);
+
+                mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
+
+                sizeOfList = mPertanyaanList.Count();
+                
+                nextBtn = FindViewById<Button>(Resource.Id.idNext);
+                prevBtn = FindViewById<Button>(Resource.Id.idPrev);
+                sendBtn = FindViewById<Button>(Resource.Id.button1);
+
+                nextBtn.Click += NextBtn_Click; 
+                prevBtn.Click += PrevBtn_Click;
+                sendBtn.Click += SendBtn_Click;
+                
+               
+            }
+            else if (id == "Dep2")
+            {
+                ds = mService.GetDataPoly();
+                var intent = new Intent(this, typeof(PoliActivity));
+                intent.PutExtra("idDepartemen", id);
+                //StartActivity(intent);
+                StartActivityForResult(intent, MainActivity.FINISH_QUESTION);
+
+
+            }
         }
+
+        
 
         private void SendBtn_Click(object sender, EventArgs e)
         {
@@ -85,7 +97,7 @@ namespace CSApplication.Activities
             string tempTidakSetuju = "";
             foreach (UserResult user in userResult)
             {
-                if(user == null)
+                if (user == null)
                 {
                     Console.Write("Empty");
                 }
@@ -94,8 +106,8 @@ namespace CSApplication.Activities
                 {
                     if (user.kategori_id == "1")
                     {
-                        
-                        if( tempSetuju == user.pertanyaan_id)
+
+                        if (tempSetuju == user.pertanyaan_id)
                         {
                             if (detailSetuju == "")
                             {
@@ -105,7 +117,8 @@ namespace CSApplication.Activities
                             {
                                 detailSetuju += "," + user.detail_pertanyaan_id;
                             }
-                        }else
+                        }
+                        else
                         {
                             if (pertanyaanSetuju == "")
                             {
@@ -127,9 +140,9 @@ namespace CSApplication.Activities
                         }
                         tempSetuju = user.pertanyaan_id;
                     }
-                    else 
+                    else
 
-                    if(tempTidakSetuju == user.pertanyaan_id)
+                    if (tempTidakSetuju == user.pertanyaan_id)
                     {
 
                         if (detailTidakSetuju == "")
@@ -140,7 +153,8 @@ namespace CSApplication.Activities
                         {
                             detailTidakSetuju += "," + user.detail_pertanyaan_id;
                         }
-                    }else
+                    }
+                    else
                     {
                         {
                             if (pertanyaanTidakSetuju == "")
@@ -162,26 +176,38 @@ namespace CSApplication.Activities
                             }
                         }
                         tempTidakSetuju = user.pertanyaan_id;
-
                     }
-                                    
                 }
             }
 
             try
             {
-                if (detailSetuju !="")
+                if (detailSetuju != "")
                 {
                     mService.InsertCustomerSatisfaction("1", pertanyaanSetuju, detailSetuju, DateTime.Now, "Customer");
-                    
+
                 }
-               if (detailTidakSetuju !="")
+                if (detailTidakSetuju != "")
                 {
                     mService.InsertCustomerSatisfaction("2", pertanyaanTidakSetuju, detailTidakSetuju, DateTime.Now, "Customer");
                 }
 
+
+
+                Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
+                Android.App.AlertDialog alertDialog = builder.Create();
+                alertDialog.SetIcon(Resource.Drawable.star);
+                alertDialog.SetInverseBackgroundForced(true);
+                alertDialog.SetMessage("Terimakasih atas partisipasi Anda ");
                 
 
+                alertDialog.SetButton("Ok", (s, ev) => {
+
+                    Intent myIntent = new Intent();
+                    SetResult(Result.Ok, myIntent);
+                    Finish();
+                });
+                alertDialog.Show();
             }
             catch (Exception ex)
             {
@@ -210,7 +236,7 @@ namespace CSApplication.Activities
         {
             if (currentPage > 0)
                 currentPage -= 1;
-            
+
             mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
             //toggleButton();
         }
@@ -219,7 +245,7 @@ namespace CSApplication.Activities
         {
             if (currentPage < sizeOfList - 1)
                 currentPage += 1;
-            
+
             mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
             if (currentPage == sizeOfList - 1)
             {
@@ -228,9 +254,6 @@ namespace CSApplication.Activities
                 prevBtn.Visibility = ViewStates.Gone;
             }
         }
-
-
-
 
         private void toggleButton()
         {
@@ -251,5 +274,6 @@ namespace CSApplication.Activities
                 nextBtn.Enabled = true;
             }
         }
+        
     }
 }

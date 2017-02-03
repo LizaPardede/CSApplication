@@ -69,35 +69,39 @@ namespace CSApplication.Adapter
 
             if (radioGroup == null)
             {
-                Console.WriteLine("Auuuuuaaaaaaaaaaaaa");
+                Console.WriteLine("null");
             }
             
             radioTidak.Click += (object sender, EventArgs e) =>
             {
                 RadioButton checkedRadioButton = row.FindViewById<RadioButton>(radioGroup.CheckedRadioButtonId);
-                UserResult userResult = new UserResult()
-                {
-                    kategori_id = "2",
-                    pertanyaan_id = IdPertanyaan,
-                    detail_pertanyaan_id = mItems[position].getIdDetail(),
-                    starttime = DateTime.Now,
-                    user = "Customer"
-                };
-                dbHelper.InsertIntoTableResult(userResult);
+               
+                    UserResult userResult = new UserResult()
+                    {
+                        kategori_id = "2",
+                        pertanyaan_id = IdPertanyaan,
+                        detail_pertanyaan_id = mItems[position].getIdDetail(),
+                        starttime = DateTime.Now,
+                        user = "Customer"
+                    };
+                    dbHelper.InsertIntoTableResult(userResult);
+
             };
 
             radioSetuju.Click += (object sender, EventArgs e) =>
             {
                 RadioButton checkedRadioButton = row.FindViewById<RadioButton>(radioGroup.CheckedRadioButtonId);
-                UserResult userResult = new UserResult()
-                {
-                    kategori_id = "1",
-                    pertanyaan_id = IdPertanyaan,
-                    detail_pertanyaan_id = mItems[position].getIdDetail(),
-                    starttime = DateTime.Now,
-                    user = "Customer"
-                };
-                dbHelper.InsertIntoTableResult(userResult);  
+                
+                    UserResult userResult = new UserResult()
+                    {
+                        kategori_id = "1",
+                        pertanyaan_id = IdPertanyaan,
+                        detail_pertanyaan_id = mItems[position].getIdDetail(),
+                        starttime = DateTime.Now,
+                        user = "Customer"
+                    };
+                    dbHelper.InsertIntoTableResult(userResult);
+          
             };
             return row;
         }

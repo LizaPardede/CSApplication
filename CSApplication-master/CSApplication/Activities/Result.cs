@@ -15,6 +15,8 @@ namespace CSApplication.Activities
     [Activity(Label = "Result")]
     public class Result : Activity
     {
+        internal static readonly Android.App.Result Ok;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

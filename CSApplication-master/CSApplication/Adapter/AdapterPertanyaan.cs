@@ -23,8 +23,6 @@ namespace CSApplication.Adapter
         private Activity mContext;
         private PertanyaanFragment pertanyaanFragment;
         private List<PertanyaanModel> mPertanyaanList;
-        BaseAdapter parentAdapter;
-        public static Context context;
         private DBHelper dbHelper;
 
 
@@ -55,14 +53,6 @@ namespace CSApplication.Adapter
             get
             {
                 return mItems.Count();
-                //if (parentAdapter != null)
-                //{
-                //    if (parentAdapter.Count == 0)
-                //    {
-                //        return 0;
-                //    }
-                //}
-                //return 1;
             }
         }
 
@@ -81,7 +71,7 @@ namespace CSApplication.Adapter
 
                 if (txtPertanyaan == null)
                 {
-                    Console.WriteLine("brrrrrrrrrrrrrrr");
+                    Console.WriteLine("null");
                 }
                 CSService.WebService1 mService = new CSService.WebService1();
                 mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
@@ -92,25 +82,11 @@ namespace CSApplication.Adapter
                 ListView listDetail = row.FindViewById<ListView>(Resource.Id.lvDetail);
                 listDetail.Adapter = new AdapterDetailPertanyaan(mContext, mDetails, dbHelper, mItems[position].getPertanyaanId());
                 txtPertanyaan.Text = mItems[position].getPertanyaanNama();
-
-
-
+                
             }
             return row;
         }
 
-
-
-        //public static List<DetailPertanyaanModel> listDetailPertanyaan(string id)
-        //{
-        //    CSService.WebService1 mService = new CSService.WebService1();
-        //    mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
-
-        //    List<DetailPertanyaanModel> mDetailPertanyaan = new List<DetailPertanyaanModel>();
-        //    DataSet ds = mService.GetDetailPertanyaanByPertanyaan(id);
-        //    mDetailPertanyaan = getDetailPertanyaan(ds);
-        //    return mDetailPertanyaan;
-        //}
 
         private static List<DetailPertanyaanModel> getDetailPertanyaan(DataSet ds)
         {

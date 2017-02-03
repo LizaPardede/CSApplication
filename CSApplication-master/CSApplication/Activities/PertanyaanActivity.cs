@@ -19,25 +19,7 @@ namespace CSApplication.Activities
     [Activity(Label = "Customer Satisfaction")]
     public class PertanyaanActivity : Activity
     {
-        [Export("radioButton_Click")]
         
-        public void radioButton_OnClick(View v)
-        {
-            switch (v.Id)
-            {
-                case Resource.Id.radioButton1:
-                    Toast.MakeText(this, "No!", ToastLength.Short).Show();
-                    
-                    break;
-
-                case Resource.Id.radioButton2:
-                    Toast.MakeText(this, "Yes!", ToastLength.Short).Show();
-                    break;
-            }
-        }
-
-     
-
         private List<PertanyaanModel> mPertanyaanList;
         private ListView mListView;
 

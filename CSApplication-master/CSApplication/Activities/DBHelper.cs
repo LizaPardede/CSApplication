@@ -43,12 +43,6 @@ namespace CSApplication.Activities
         {
             try
             {
-                //using (var connection = new SQLite.SQLiteConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db")))
-                //{
-                //    connection.Insert(userResult);
-                //    return true;
-                //}
-
                 var db = new SQLite.SQLiteAsyncConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db"));
                 if (db.InsertAsync(userResult) != null) {
                     db.UpdateAsync(userResult);
@@ -105,6 +99,70 @@ namespace CSApplication.Activities
 
             }
         }
-        
+
+
+        public bool RjInsertIntoTableResult(ResultRawatJalan resultRawatJalan)
+        {
+            try
+            {
+
+                var db = new SQLite.SQLiteAsyncConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db"));
+                if (db.InsertAsync(resultRawatJalan) != null)
+                {
+                    db.UpdateAsync(resultRawatJalan);
+                }
+
+                return true;
+
+            }
+            catch (SQLiteException ex)
+            {
+                Log.Info("SQLiteEx", ex.Message);
+                return false;
+
+            }
+        }
+
+        public List<ResultRawatJalan> RjSelectTableResult()
+        {
+            try
+            {
+                using (var connection = new SQLite.SQLiteConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db")))
+                {
+                    connection.CreateTable<ResultRawatJalan>();
+                    return connection.Table<ResultRawatJalan>().ToList();
+                }
+
+            }
+            catch (SQLiteException ex)
+            {
+                Log.Info("SQLiteEx", ex.Message);
+                return null;
+
+            }
+        }
+
+        public bool deleteDataRawatJalan(List<ResultRawatJalan> resultRawatJalan)
+        {
+            try
+            {
+                using (var connection = new SQLite.SQLiteConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db")))
+                {
+                    foreach (ResultRawatJalan resultRj in resultRawatJalan)
+                    {
+                        connection.Delete(resultRj);
+                    }
+                    return true;
+                }
+
+            }
+            catch (SQLiteException ex)
+            {
+                Log.Info("SQLiteEx", ex.Message);
+                return false;
+
+            }
+        }
+
     }
 }

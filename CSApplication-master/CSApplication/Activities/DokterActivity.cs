@@ -20,22 +20,25 @@ namespace CSApplication.Activities
     {
         private List<DokterModel> mDokterList;
         private ListView mListView;
-        
 
+        private string idPoli;
+        private string idDep;
+      
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.layout_dokter);
-            string id = Intent.GetStringExtra("idPoli") ?? "Data not available";
-            string idDep = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
-
+            idPoli = Intent.GetStringExtra("idPoli") ?? "Data not available";
+            idDep = Intent.GetStringExtra("idDepartemen") ?? "Data tidak tersedia";
+            //disini buat
+            Console.Write(idDep);
 
             mListView = FindViewById<ListView>(Resource.Id.listDokter);
             mDokterList = new List<DokterModel>();
             CSService.WebService1 mService = new CSService.WebService1();
             mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
 
-            DataSet ds = mService.GedDataDoctorbyPoly(id);
+            DataSet ds = mService.GedDataDoctorbyPoly(idPoli);
             mDokterList = getDokterName(ds);
             mListView.Adapter = new AdapterDokter(this, mDokterList);
             mListView.ItemClick += MListView_ItemClick;
@@ -46,7 +49,9 @@ namespace CSApplication.Activities
         {
             var mDokter = mDokterList[e.Position];
             var intent = new Intent(this, typeof(PertanyaanRJ));
-            intent.PutExtra("idDepartemen", "Dep2");
+            intent.PutExtra("idPoli", idPoli);
+            intent.PutExtra("idDepartemen", idDep);
+            intent.PutExtra("idDokter", mDokter.getDokterId());
             StartActivity(intent);
         }
 
@@ -62,6 +67,12 @@ namespace CSApplication.Activities
                 tempDokter.Add(mDokter);
             }
             return tempDokter;
+        }
+
+
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
         }
     }
 }

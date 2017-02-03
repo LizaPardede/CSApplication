@@ -118,6 +118,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\assets\Sy
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\values\styles.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\drawable\button.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\CSApplication.dll.mdb
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.pdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.CSApplication.apk
@@ -125,7 +126,6 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\SQLite-net.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\SQLitePCL.raw.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\SQLite-net.dll.mdb
-C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.csprojResolveAssemblyReference.cache
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\CSApplication.pdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\android\bin\CSApplication.CSApplication.apk
@@ -134,7 +134,6 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_poli_adapter.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_dokter_adapter.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_dokter.xml
-C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_detail_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_detail_pertanyaan_adapter.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan_rj.xml
@@ -145,6 +144,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\result.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pager.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan_adapter.xml
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\dialog.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\main.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\values\strings.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\icon.png
@@ -152,6 +152,8 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\button.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\next.png
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\previous.png
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\familydoctor.jpg
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\drawable\star.png
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\R.cs.flag
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\uploadflags.txt
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.dll.mdb

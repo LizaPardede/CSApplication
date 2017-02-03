@@ -1,12 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
+<!--For overall app-->
   <style name="MyCustomTheme" parent="android:Theme.Material.Light">
     <!-- Override the app bar color -->
-    <item name="android:colorPrimary">#6A34AE</item>
+    <item name="android:colorPrimary">#1875ba</item>
     <!-- Override the color of UI controls -->
     <item name="android:colorAccent">#f5615d</item>
     <item name="android:colorPrimaryDark">#4a148c</item>
-    <item name="android:textColorPrimary">#FFFFFF</item>
-    <item name="android:statusBarColor">#63399f</item>
+    <item name="android:textColorPrimary">#ffffff</item>
+    <item name="android:statusBarColor">#096BB6</item>
+    <item name="android:alertDialogTheme">@style/AlertDialogCustom</item>
   </style>
+
+  <!--For dialog alert-->
+  <style name="AlertDialogCustom" parent="@android:style/Theme.Material.Dialog">
+    <item name="android:textColor">#283593</item>
+    <item name="android:textColorPrimary">#096BB6</item>
+    <item name="android:textColorTertiary">#9c27b0</item>
+
+    <item name="android:background">#ffffff</item>
+  </style>
+
+  <style name="MyApp.DialogButton" parent="@android:style/TextAppearance.Material.Button">
+    <item name="android:textColor">#f5615d</item>
+  </style>
+
+  <style name="Theme.NoTitle" parent="android:Theme">
+    <item name="android:windowNoTitle">true</item>
+  </style>
+
 </resources>
