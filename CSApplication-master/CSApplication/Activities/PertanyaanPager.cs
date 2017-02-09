@@ -37,6 +37,11 @@ namespace CSApplication.Activities
 
         private CSService.WebService1 mService = new CSService.WebService1();
 
+        private RadioButton radioSetuju;
+        private RadioButton radioTidak;
+        private RadioGroup radioGroup;
+        private TextView txtError;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -69,25 +74,27 @@ namespace CSApplication.Activities
                 prevBtn = FindViewById<Button>(Resource.Id.idPrev);
                 sendBtn = FindViewById<Button>(Resource.Id.button1);
 
+                radioGroup = FindViewById<RadioGroup>(Resource.Id.radioGroup1);
+                radioSetuju = FindViewById<RadioButton>(Resource.Id.radioButton1);
+                radioTidak = FindViewById<RadioButton>(Resource.Id.radioButton2);
+
+                txtError = FindViewById<TextView>(Resource.Id.textError);
+
                 nextBtn.Click += NextBtn_Click; 
                 prevBtn.Click += PrevBtn_Click;
                 sendBtn.Click += SendBtn_Click;
                 
-               
             }
             else if (id == "Dep2")
             {
                 ds = mService.GetDataPoly();
                 var intent = new Intent(this, typeof(PoliActivity));
                 intent.PutExtra("idDepartemen", id);
-                //StartActivity(intent);
-                StartActivityForResult(intent, MainActivity.FINISH_QUESTION);
-
-
+                StartActivity(intent);
+                //StartActivityForResult(intent, MainActivity.FINISH_QUESTION);
+                
             }
         }
-
-        
 
         private void SendBtn_Click(object sender, EventArgs e)
         {
@@ -178,6 +185,7 @@ namespace CSApplication.Activities
                         tempTidakSetuju = user.pertanyaan_id;
                     }
                 }
+                
             }
 
             try
@@ -191,9 +199,7 @@ namespace CSApplication.Activities
                 {
                     mService.InsertCustomerSatisfaction("2", pertanyaanTidakSetuju, detailTidakSetuju, DateTime.Now, "Customer");
                 }
-
-
-
+                
                 Android.App.AlertDialog.Builder builder = new Android.App.AlertDialog.Builder(this);
                 Android.App.AlertDialog alertDialog = builder.Create();
                 alertDialog.SetIcon(Resource.Drawable.star);
@@ -238,15 +244,41 @@ namespace CSApplication.Activities
                 currentPage -= 1;
 
             mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
-            //toggleButton();
-        }
+         }
 
         private void NextBtn_Click(object sender, System.EventArgs e)
         {
             if (currentPage < sizeOfList - 1)
                 currentPage += 1;
 
+
+            List<UserResult> userResult = new List<UserResult>();
+            userResult = dbHelper.selectTableResult();
+            string tempSetuju = "";
+            string tempTidakSetuju = "";
+            foreach (UserResult user in userResult)
+            {
+
+
+                if (txtError == null)
+                {
+                    Console.WriteLine("Haaaaaaaaaaaaaaaaaaaaaallllllllllllllllllllooooooooo");
+                }
+                else
+                {
+                    if (radioGroup == null)
+                    {
+                        txtError.Visibility = ViewStates.Visible;
+                        nextBtn.Enabled = false;
+
+                    }
+
+                }
+            }
+
+
             mListView.Adapter = new AdapterPertanyaan(this, p.generatePage(currentPage), dbHelper);
+            
             if (currentPage == sizeOfList - 1)
             {
                 sendBtn.Visibility = ViewStates.Visible;
@@ -255,6 +287,13 @@ namespace CSApplication.Activities
             }
         }
 
+        private void checkRadio() {
+            int cekRadio = radioGroup.CheckedRadioButtonId;
+
+
+        }
+
+     
         private void toggleButton()
         {
             if (currentPage == totalPages)
@@ -274,6 +313,9 @@ namespace CSApplication.Activities
                 nextBtn.Enabled = true;
             }
         }
-        
+
+        //public void checkRadioClick() {
+        //    int checkRadioId = radioGroup
+        //}
     }
 }

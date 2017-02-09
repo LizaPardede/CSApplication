@@ -40,6 +40,8 @@ namespace CSApplication.Adapter
             this.mPertanyaanList = mPertanyaanList;
         }
 
+      
+
         public override PertanyaanModel this[int position]
         {
             get
@@ -80,7 +82,19 @@ namespace CSApplication.Adapter
                 mDetails = getDetailPertanyaan(ds);
 
                 ListView listDetail = row.FindViewById<ListView>(Resource.Id.lvDetail);
-                listDetail.Adapter = new AdapterDetailPertanyaan(mContext, mDetails, dbHelper, mItems[position].getPertanyaanId());
+                //List<UserResult> temp = dbHelper.selectQueryTableResult(mItems[position].getPertanyaanId());
+
+                //if(temp.Count > 0)
+                //{
+                //    listDetail.Adapter = new AdapterDetailPertanyaan(mContext, mDetails, dbHelper, mItems[position].getPertanyaanId(), temp);
+
+                //}
+                //else
+                //{
+
+                    listDetail.Adapter = new AdapterDetailPertanyaan(mContext, mDetails, dbHelper, mItems[position].getPertanyaanId());
+                //}
+
                 txtPertanyaan.Text = mItems[position].getPertanyaanNama();
                 
             }
@@ -103,9 +117,5 @@ namespace CSApplication.Adapter
             }
             return tempDetail;
         }
-
-
-
-
     }
 }

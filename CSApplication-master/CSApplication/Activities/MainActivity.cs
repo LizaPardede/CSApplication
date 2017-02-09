@@ -15,19 +15,15 @@ namespace CSApplication
     [Activity(Label = "Customer Satisfaction", Theme = "@style/Theme.NoTitle", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-
         public const int FINISH_QUESTION = 0;
-
         private List<ModelDepartemen> mDepartemenList;
         private ListView mListView;
        
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             
-
             CSService.WebService1 mService = new CSService.WebService1();
             mService.Url = "http://10.160.1.123/CSService/WebService1.asmx";
 
@@ -75,7 +71,6 @@ namespace CSApplication
                 if (resultCode == FINISH_QUESTION) {
                     Toast.MakeText(this, "Thanks", ToastLength.Short).Show();
                     Console.WriteLine("Pantaaaaaaaaaaaaaaaaiiiiiiiiiiii");
-
                 }
             }
         }

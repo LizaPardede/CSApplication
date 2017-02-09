@@ -43,6 +43,8 @@ namespace CSApplication.Activities
         private string poliId;
         private string dokterId;
 
+        public const int FINISH_QUESTION = 0;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -72,13 +74,18 @@ namespace CSApplication.Activities
             prevBtn = FindViewById<Button>(Resource.Id.idPrev);
             sendBtn = FindViewById<Button>(Resource.Id.button1);
             
-            //ada bos 
             nextBtn.Click += NextBtn_Click;
             prevBtn.Click += PrevBtn_Click;
             sendBtn.Click += SendBtn_Click;
 
         }
-        
+
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+            Finish();
+        }
+
         private void SendBtn_Click(object sender, EventArgs e)
         {
             List<UserResult> resultRawatJalan = new List<UserResult>();
@@ -210,6 +217,7 @@ namespace CSApplication.Activities
             }
         }
 
+
         private List<PertanyaanModel> getRawatJalanList(DataSet ds)
         {
             List<PertanyaanModel> tempPrj = new List<PertanyaanModel>();
@@ -224,5 +232,7 @@ namespace CSApplication.Activities
             }
             return tempPrj;
         }
+
+
     }
 }

@@ -22,10 +22,8 @@ namespace CSApplication.Activities
         private ListView mListView;
         private string idDep;
 
-        public override void OnBackPressed()
-        {
-            base.OnBackPressed();
-        }
+        public const int FINISH_QUESTION = 0;
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {  
             base.OnCreate(savedInstanceState);
@@ -51,7 +49,7 @@ namespace CSApplication.Activities
             var intent = new Intent(this, typeof(DokterActivity));
             intent.PutExtra("idPoli", mPoli.getPoliId());
             intent.PutExtra("idDepartemen", idDep);
-            StartActivity(intent); 
+            StartActivityForResult(intent, MainActivity.FINISH_QUESTION);
         }
 
         private List<PoliModel> getPoliName(DataSet ds)
@@ -67,5 +65,14 @@ namespace CSApplication.Activities
             }
             return tempPoli;
         }
+
+        public override void OnBackPressed()
+        {
+            base.OnBackPressed();
+            var intent = new Intent(this, typeof(MainActivity))
+                  .SetFlags(ActivityFlags.ReorderToFront);
+            StartActivity(intent);
+        }
+
     }
 }

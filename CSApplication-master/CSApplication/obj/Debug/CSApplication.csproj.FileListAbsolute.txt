@@ -118,7 +118,6 @@ C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\android\assets\Sy
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\values\styles.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\res\drawable\button.xml
 C:\Users\parde\Documents\CSApplication\CSApplication\obj\Debug\CSApplication.dll.mdb
-C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.dll
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.pdb
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\bin\Debug\CSApplication.CSApplication.apk
@@ -134,6 +133,7 @@ C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\De
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_poli_adapter.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_dokter_adapter.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_dokter.xml
+C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_detail_pertanyaan.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_detail_pertanyaan_adapter.xml
 C:\Users\parde\Documents\CSApplication\CSApplication-master\CSApplication\obj\Debug\res\layout\layout_pertanyaan_rj.xml

@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:layout_gravity="center_horizontal|center"
+            android:layout_alignParentBottom="true"
             android:drawableLeft="@drawable/previous"
             android:background="#42a5f5"
             android:id="@+id/idPrev" />
@@ -38,7 +38,7 @@
             android:layout_height="40dp"
             android:layout_weight="1"
             android:drawableRight="@drawable/next"
-            android:layout_gravity="center_horizontal|center"
+            android:layout_alignParentBottom="true"
             android:background="#1565c0"
             android:id="@+id/idNext" />
     </LinearLayout>

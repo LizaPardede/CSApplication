@@ -52,7 +52,7 @@ namespace CSApplication.Activities
             intent.PutExtra("idPoli", idPoli);
             intent.PutExtra("idDepartemen", idDep);
             intent.PutExtra("idDokter", mDokter.getDokterId());
-            StartActivity(intent);
+            StartActivityForResult(intent, MainActivity.FINISH_QUESTION);
         }
 
         private List<DokterModel> getDokterName(DataSet ds)
@@ -68,11 +68,6 @@ namespace CSApplication.Activities
             }
             return tempDokter;
         }
-
-
-        public override void OnBackPressed()
-        {
-            base.OnBackPressed();
-        }
+        
     }
 }

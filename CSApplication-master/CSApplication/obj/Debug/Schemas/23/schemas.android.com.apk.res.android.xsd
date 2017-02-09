@@ -2,7 +2,7 @@
 <xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified" elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:annotation>
     <xs:documentation>v23</xs:documentation>
-    <xs:documentation>2017-02-03 4:34:16 PM</xs:documentation>
+    <xs:documentation>2017-02-08 5:15:33 PM</xs:documentation>
   </xs:annotation>
   <xs:attribute name="accessibilityLiveRegion">
     <xs:annotation>
@@ -16990,6 +16990,7 @@
             <xs:enumeration value="@id/relativeLayout1" />
             <xs:enumeration value="@id/textDetailPertanyaan" />
             <xs:enumeration value="@id/textDokter" />
+            <xs:enumeration value="@id/textError" />
             <xs:enumeration value="@id/textPertanyaan" />
             <xs:enumeration value="@id/textPoli" />
             <xs:enumeration value="@id/textView1" />

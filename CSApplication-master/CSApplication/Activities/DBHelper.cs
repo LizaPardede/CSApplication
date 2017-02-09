@@ -29,13 +29,11 @@ namespace CSApplication.Activities
                     connection.CreateTable<UserResult>();
                     return true;
                 }
-
             }
             catch (SQLiteException ex)
             {
                 Log.Info("SQLiteEx", ex.Message);
                 return false;
-
             }
         }
 
@@ -78,6 +76,30 @@ namespace CSApplication.Activities
             }
         }
 
+        //public List<UserResult> selectQueryTableResult(string id) {
+        //    try
+        //    {
+        //        using (var connection = new SQLite.SQLiteConnection(System.IO.Path.Combine(folder, "CUSTOMER_SATISFACTION.db"))) {
+
+        //            UserResult uRes = new UserResult();
+        //            if (uRes == null)
+        //            {
+        //                Console.WriteLine("Kenyaaaaaaaaaaaaaaaaaaanggggg");
+        //            }
+        //            else {
+        //                Console.WriteLine("Laaaaaaapppppppppppppppppaaaaaaaaaaarrr");
+        //                //connection.Query<UserResult>("SELECT * FROM UserResult WHERE pertanyaan_id='AFR'");
+                        
+        //            }
+        //            return connection.Table<UserResult>().ToList();
+        //            }
+        //    }
+        //    catch (SQLiteException ex) {
+        //        Log.Info("SQLiteEx", ex.Message);
+        //        return null;
+        //    }
+        //}
+        
         public bool deleteData(List<UserResult> userResult)
         {
             try
@@ -132,7 +154,6 @@ namespace CSApplication.Activities
                     connection.CreateTable<ResultRawatJalan>();
                     return connection.Table<ResultRawatJalan>().ToList();
                 }
-
             }
             catch (SQLiteException ex)
             {
@@ -154,15 +175,12 @@ namespace CSApplication.Activities
                     }
                     return true;
                 }
-
             }
             catch (SQLiteException ex)
             {
                 Log.Info("SQLiteEx", ex.Message);
                 return false;
-
             }
         }
-
     }
 }

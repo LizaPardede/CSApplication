@@ -3,22 +3,36 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
-
+  <LinearLayout
+      android:orientation="vertical"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/linearLayout1">
     <TextView
-        android:id="@+id/textPertanyaan"
-        android:text="Pertanyaan"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="#FEFEFE"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#2B2835"
-        android:textStyle="bold"
-        android:padding="5dp"
-        android:paddingBottom="2dp" />
+         android:id="@+id/textPertanyaan"
+         android:text="Pertanyaan"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:background="#FEFEFE"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:textColor="#2B2835"
+         android:textStyle="bold"
+         android:padding="5dp"
+         android:paddingBottom="2dp" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="vertical"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="438dp"
+      android:id="@+id/linearLayout1">
     <ListView
         android:id="@+id/lvDetail"
-        android:layout_width="fill_parent"
-        android:layout_height="420dp"
-        android:cacheColorHint="#FFDAFF7F" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </LinearLayout>
 
 </LinearLayout>
